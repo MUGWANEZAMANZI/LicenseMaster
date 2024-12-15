@@ -13,7 +13,7 @@ public class MoveMe : MonoBehaviour
     // public LayerMask layerMask;
     //[SerializeField] Transform target;
     public GameObject Player;
-    float moveSpeed = 2f;
+    float moveSpeed = 30f;
     public float speed = .02f;
     private float timer1 = 8f;
     private float timer2 = 8f;
