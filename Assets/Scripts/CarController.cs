@@ -1,6 +1,7 @@
 using System;
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class CarController : MonoBehaviour
 {
@@ -22,7 +23,17 @@ public class CarController : MonoBehaviour
   public int decelerationMultiplier = 2;
   [Range(1, 10)]
   public int handbrakeDriftMultiplier = 5;
-  public Vector3 bodyMassCenter;
+  [SerializeField] public bool leftBlinkerOn;
+  [SerializeField] public bool rightBlinkerOn;
+
+  [Header("References")]
+  [SerializeField] public Vector3 bodyMassCenter;
+  [SerializeField] public Material blinkerOff;
+  [SerializeField] public Material blinkerOn;
+  [SerializeField] public GameObject LeftBlinker;
+  [SerializeField] public GameObject RightBlinker;
+
+  [SerializeField] public GameObject BrakeLight;
 
   [Header("Wheels")]
   public GameObject frontLeftMesh;
@@ -33,7 +44,6 @@ public class CarController : MonoBehaviour
   public WheelCollider rearLeftCollider;
   public GameObject rearRightMesh;
   public WheelCollider rearRightCollider;
-
 
   [HideInInspector]
   public float speed;
@@ -50,6 +60,8 @@ public class CarController : MonoBehaviour
   private float localVelocityX;
   private bool deceleratingCar;
   private bool touchControlsSetup = false;
+  private bool leftBlinkerCoroutine = false;
+  private bool rightBlinkerCoroutine = false;
 
   WheelFrictionCurve FLwheelFriction;
   float FLWextremumSlip;
@@ -100,17 +112,20 @@ public class CarController : MonoBehaviour
 
   void Update()
   {
-    // Set speed of car and set local velocity for reference.
+    // Calculate speed of car and set local velocity for reference.
     speed = (2 * Mathf.PI * frontLeftCollider.radius * frontLeftCollider.rpm * 60) / 1000;
     localVelocityX = transform.InverseTransformDirection(rb.velocity).x;
     localVelocityZ = transform.InverseTransformDirection(rb.velocity).z;
 
+    // Accelerate
     if (Input.GetKey(KeyCode.W))
     {
       CancelInvoke("DecelerateCar");
       deceleratingCar = false;
       GoForward();
     }
+
+    // Reverse/Brake
     if (Input.GetKey(KeyCode.S))
     {
       CancelInvoke("DecelerateCar");
@@ -118,45 +133,73 @@ public class CarController : MonoBehaviour
       GoReverse();
     }
 
-    if (Input.GetKey(KeyCode.A))
+    // Left
+    if (Input.GetKey(KeyCode.A)) TurnLeft();
+
+    // Right
+    if (Input.GetKey(KeyCode.D)) TurnRight();
+
+    //Right Blinker
+    if (Input.GetKeyUp(KeyCode.E))
     {
-      TurnLeft();
+      rightBlinkerOn = !rightBlinkerOn;
+      leftBlinkerOn = false;
     }
-    if (Input.GetKey(KeyCode.D))
+
+    // Left BLinker
+    if (Input.GetKeyUp(KeyCode.Q))
     {
-      TurnRight();
+      leftBlinkerOn = !leftBlinkerOn;
+      rightBlinkerOn = false;
     }
-    if (Input.GetKey(KeyCode.Space))
-    {
-      // CancelInvoke("DecelerateCar");
-      // deceleratingCar = false;
-      // Handbrake();
-    }
-    if (Input.GetKeyUp(KeyCode.Space))
-    {
-      // RecoverTraction();
-    }
-    if ((!Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W)))
-    {
-      ThrottleOff();
-    }
+
+    // Coast
+    if ((!Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W))) ThrottleOff();
+
     if ((!Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W)) && !Input.GetKey(KeyCode.Space) && !deceleratingCar)
     {
       InvokeRepeating("DecelerateCar", 0f, 0.1f);
       deceleratingCar = true;
     }
-    if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && steeringAxis != 0f)
-    {
-      ResetSteeringAngle();
-    }
+
+    if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && steeringAxis != 0f) ResetSteeringAngle();
+
+    // Brake Lights
+    if (Input.GetKeyDown(KeyCode.S)) BrakeLight.GetComponent<MeshRenderer>().material = blinkerOn;
+    if (Input.GetKeyUp(KeyCode.S)) BrakeLight.GetComponent<MeshRenderer>().material = blinkerOff;
 
     // Turn and rotate wheels
     AnimateWheelMeshes();
+    if (leftBlinkerOn && !leftBlinkerCoroutine) StartCoroutine(LeftBlinkerFlash());
+    if (rightBlinkerOn && !rightBlinkerCoroutine) StartCoroutine(RightBlinkerFlash());
+  }
+
+  private IEnumerator LeftBlinkerFlash()
+  {
+    leftBlinkerCoroutine = true;
+    MeshRenderer blinker = LeftBlinker.GetComponent<MeshRenderer>();
+    blinker.material = blinkerOn;
+    yield return new WaitForSeconds(.5f);
+    blinker.material = blinkerOff;
+    yield return new WaitForSeconds(.5f);
+    leftBlinkerCoroutine = false;
+  }
+
+  private IEnumerator RightBlinkerFlash()
+  {
+    rightBlinkerCoroutine = true;
+    MeshRenderer blinker = RightBlinker.GetComponent<MeshRenderer>();
+    blinker.material = blinkerOn;
+    yield return new WaitForSeconds(.5f);
+    blinker.material = blinkerOff;
+    yield return new WaitForSeconds(.5f);
+    rightBlinkerCoroutine = false;
   }
 
   public void TurnLeft()
   {
     steeringAxis = steeringAxis - (Time.deltaTime * 10f * steeringSpeed);
+    if (steeringAxis > .95f) rightBlinkerOn = false;
     if (steeringAxis < -1f) steeringAxis = -1f;
     var steeringAngle = steeringAxis * maxSteeringAngle;
     frontLeftCollider.steerAngle = Mathf.Lerp(frontLeftCollider.steerAngle, steeringAngle, steeringSpeed);
@@ -167,6 +210,7 @@ public class CarController : MonoBehaviour
   {
     steeringAxis = steeringAxis + (Time.deltaTime * 10f * steeringSpeed);
     if (steeringAxis > 1f) steeringAxis = 1f;
+    if (steeringAxis < -.95f) leftBlinkerOn = false;
     var steeringAngle = steeringAxis * maxSteeringAngle;
     frontLeftCollider.steerAngle = Mathf.Lerp(frontLeftCollider.steerAngle, steeringAngle, steeringSpeed);
     frontRightCollider.steerAngle = Mathf.Lerp(frontRightCollider.steerAngle, steeringAngle, steeringSpeed);
@@ -174,6 +218,13 @@ public class CarController : MonoBehaviour
 
   public void ResetSteeringAngle()
   {
+    // If reseting form a near max angle turn off blinkers
+    if (Math.Abs(steeringAxis) > .95f)
+    {
+      leftBlinkerOn = false;
+      rightBlinkerOn = false;
+    }
+
     if (steeringAxis < 0f)
     {
       steeringAxis = steeringAxis + (Time.deltaTime * 10f * steeringSpeed);
