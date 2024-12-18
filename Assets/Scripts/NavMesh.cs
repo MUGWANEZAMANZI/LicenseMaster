@@ -13,7 +13,7 @@ public class NavMesh : MonoBehaviour
   public  void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        GetComponent<NavMeshAgent>().speed = 3f;
+        GetComponent<NavMeshAgent>().speed = 15f;
     }
 public void GoToNextPoint()
     {

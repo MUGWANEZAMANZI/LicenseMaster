@@ -46,14 +46,14 @@ public class CarController : MonoBehaviour
   public WheelCollider rearRightCollider;
 
   [HideInInspector]
-  public float speed;
+  public static float speed;
   [HideInInspector]
   public bool isDrifting;
   [HideInInspector]
   public bool isTractionLocked;
 
   private Rigidbody rb;
-  private float steeringAxis; // Represents the steering wheel. Values from -1 to 1.
+  public static float steeringAxis; // Represents the steering wheel. Values from -1 to 1.
   private float throttleAxis; // Used to know whether the throttle has reached the maximum value. It goes from -1 to 1.
   private float driftingAxis;
   private float localVelocityZ;
