@@ -1,6 +1,6 @@
 using System;
 using System.Collections;
-using Unity.VisualScripting;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CarController : MonoBehaviour
@@ -25,6 +25,9 @@ public class CarController : MonoBehaviour
   public int handbrakeDriftMultiplier = 5;
   [SerializeField] public bool leftBlinkerOn;
   [SerializeField] public bool rightBlinkerOn;
+  [SerializeField] public bool offRoad;
+
+  [SerializeField] public List<string> wheelsOffRoad = new List<string>();
 
   [Header("References")]
   [SerializeField] public Vector3 bodyMassCenter;
@@ -32,7 +35,6 @@ public class CarController : MonoBehaviour
   [SerializeField] public Material blinkerOn;
   [SerializeField] public GameObject LeftBlinker;
   [SerializeField] public GameObject RightBlinker;
-
   [SerializeField] public GameObject BrakeLight;
 
   [Header("Wheels")]
@@ -113,7 +115,7 @@ public class CarController : MonoBehaviour
   void Update()
   {
     // Calculate speed of car and set local velocity for reference.
-    speed = (2 * Mathf.PI * frontLeftCollider.radius * frontLeftCollider.rpm * 60) / 1000;
+    speed = ((2 * Mathf.PI * frontLeftCollider.radius * frontLeftCollider.rpm * 60) / 1000) / 3; // Dividing by three for now just cause
     localVelocityX = transform.InverseTransformDirection(rb.velocity).x;
     localVelocityZ = transform.InverseTransformDirection(rb.velocity).z;
 
@@ -271,7 +273,7 @@ public class CarController : MonoBehaviour
 
   public void GoForward()
   {
-    if (Mathf.Abs(localVelocityX) > 2.5f)
+    if (Mathf.Abs(localVelocityX) > 4.5f)
     {
       isDrifting = true;
     }
@@ -314,7 +316,7 @@ public class CarController : MonoBehaviour
 
   public void GoReverse()
   {
-    if (Mathf.Abs(localVelocityX) > 2.5f)
+    if (Mathf.Abs(localVelocityX) > 4.5f)
     {
       isDrifting = true;
     }
@@ -369,7 +371,7 @@ public class CarController : MonoBehaviour
 
   public void DecelerateCar()
   {
-    if (Mathf.Abs(localVelocityX) > 2.5f)
+    if (Mathf.Abs(localVelocityX) > 4.5f)
     {
       isDrifting = true;
     }
@@ -430,7 +432,7 @@ public class CarController : MonoBehaviour
     {
       driftingAxis = 1f;
     }
-    if (Mathf.Abs(localVelocityX) > 2.5f)
+    if (Mathf.Abs(localVelocityX) > 4.5f)
     {
       isDrifting = true;
     }
@@ -499,4 +501,5 @@ public class CarController : MonoBehaviour
       driftingAxis = 0f;
     }
   }
+
 }
