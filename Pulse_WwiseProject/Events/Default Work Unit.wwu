@@ -3,29 +3,49 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{E5FF49E0-91AB-46C9-A0A1-AD6D1EBC17D7}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="levelSet_ambience" ID="{2807A1F4-3A44-4642-9036-0C65DF1EFBDF}">
+				<Event Name="LevelStart" ID="{2807A1F4-3A44-4642-9036-0C65DF1EFBDF}">
 					<ChildrenList>
 						<Action Name="" ID="{ABB4F93B-CC7D-48F6-ACBF-A60447CF48BA}" ShortID="376161299">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="sfx_ambience" ID="{076CBAE9-D8DF-4640-A3EC-3F1E828B1833}" WorkUnitID="{A8681C96-2D69-4F34-8A7D-7701408A897A}"/>
+									<ObjectRef Name="RoadAmbience" ID="{076CBAE9-D8DF-4640-A3EC-3F1E828B1833}" WorkUnitID="{A8681C96-2D69-4F34-8A7D-7701408A897A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="turnSignal" ID="{174DE36F-CB14-496C-B9F1-AD52E32B501B}">
+				<Event Name="TurnSignal" ID="{174DE36F-CB14-496C-B9F1-AD52E32B501B}">
 					<ChildrenList>
 						<Action Name="" ID="{18DA6FD0-F6EA-4547-941D-DB5F9BF2AAA7}" ShortID="120805038">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="sfx_turn-signal-loop" ID="{3905921C-BB07-4201-907E-E64BB7A675DE}" WorkUnitID="{A8681C96-2D69-4F34-8A7D-7701408A897A}"/>
+									<ObjectRef Name="TurnSignalOn" ID="{3905921C-BB07-4201-907E-E64BB7A675DE}" WorkUnitID="{A8681C96-2D69-4F34-8A7D-7701408A897A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B9CDBFD2-40F3-41B1-9F71-76FC72AA294F}" ShortID="894041003">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TurnSignalOff" ID="{8B28436D-5A6C-4C1C-91EF-2E1FA00F07CA}" WorkUnitID="{A8681C96-2D69-4F34-8A7D-7701408A897A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="engineRPM" ID="{67AB0336-8AA0-40D6-9C33-BCE9D9A283D5}"/>
+				<Event Name="CarEngineStart" ID="{DBBAA77F-520F-449D-A869-8B8390CDC165}">
+					<ChildrenList>
+						<Action Name="" ID="{F5C7C8AD-BB05-4220-B44D-2160FE8621C9}" ShortID="703912140">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CarEngine" ID="{4D429D30-F4F6-4D04-B529-7A5560CBA2F0}" WorkUnitID="{A8681C96-2D69-4F34-8A7D-7701408A897A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

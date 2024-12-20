@@ -1,0 +1,161 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3161908922",
+    "Type": "User",
+    "GUID": "{87C647B2-049B-4386-8797-583017334CB7}",
+    "Language": "SFX",
+    "Hash": "{00E20A1F-008E-6C05-1C1D-4BDCDCBDEF26}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
+    "ShortName": "Main",
+    "Path": "Main.bnk",
+    "Media": [
+     {
+      "Id": "207371283",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "4k-rpm-idle-loop.wav",
+      "CachePath": "41/{4196EB86-B40C-2953-440C-3BAE0C6EBE14}.wem"
+     },
+     {
+      "Id": "226987477",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "2k-rpm-idle-loop.wav",
+      "CachePath": "55/{5501CFDF-7CE5-2526-18E6-BF458F485DE2}.wem"
+     },
+     {
+      "Id": "377713728",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ambience-loop_2.wav",
+      "CachePath": "65/{65F2B4BE-C115-2B65-0197-3E27625FE8F3}.wem"
+     },
+     {
+      "Id": "423541099",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "3k-rpm-idle-loop.wav",
+      "CachePath": "61/{6110DD24-9149-F135-B7D2-E9A9CC7ABB1C}.wem"
+     },
+     {
+      "Id": "427793532",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "0k-rpm-idle-loop.wav",
+      "CachePath": "E9/{E941D5DF-BD0B-C384-127F-586030B40BB8}.wem"
+     },
+     {
+      "Id": "473609348",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "click-clack-loop.wav",
+      "CachePath": "F4/{F48A763C-42E1-E971-6429-5B2ADCA47703}.wem"
+     },
+     {
+      "Id": "535750132",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "1k-rpm-idle-loop.wav",
+      "CachePath": "77/{779081D7-4713-A000-5263-E053AE4B5EC0}.wem"
+     },
+     {
+      "Id": "688959639",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ambience-loop.wav",
+      "CachePath": "16/{164D85BB-46DE-5530-6229-AC4774293E8C}.wem"
+     },
+     {
+      "Id": "984636645",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "5k-rpm-idle-loop.wav",
+      "CachePath": "EA/{EAD71E54-56B6-469F-C251-0D23170C7AD7}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2231332761",
+      "Name": "CarEngineStart",
+      "ObjectPath": "\\Events\\Default Work Unit\\CarEngineStart",
+      "GUID": "{DBBAA77F-520F-449D-A869-8B8390CDC165}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "207371283"
+       },
+       {
+        "Id": "226987477"
+       },
+       {
+        "Id": "423541099"
+       },
+       {
+        "Id": "427793532"
+       },
+       {
+        "Id": "535750132"
+       },
+       {
+        "Id": "984636645"
+       }
+      ]
+     },
+     {
+      "Id": "3372421815",
+      "Name": "LevelStart",
+      "ObjectPath": "\\Events\\Default Work Unit\\LevelStart",
+      "GUID": "{2807A1F4-3A44-4642-9036-0C65DF1EFBDF}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "377713728"
+       },
+       {
+        "Id": "688959639"
+       }
+      ]
+     },
+     {
+      "Id": "3858101368",
+      "Name": "TurnSignal",
+      "ObjectPath": "\\Events\\Default Work Unit\\TurnSignal",
+      "GUID": "{174DE36F-CB14-496C-B9F1-AD52E32B501B}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.82528394",
+      "DurationMax": "0.82528394",
+      "MediaRefs": [
+       {
+        "Id": "473609348"
+       }
+      ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "1493153371",
+      "Name": "PlayerSpeed",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\PlayerSpeed",
+      "GUID": "{6D8A2DEB-1D37-4E0E-A9CA-0D986029453C}"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{42321454-EBDC-FE90-ECCC-B01C96384A4E}"
+ }
+}

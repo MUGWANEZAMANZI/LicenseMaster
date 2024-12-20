@@ -1,0 +1,19 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2231332761	CarEngineStart			\Default Work Unit\CarEngineStart	
+	3372421815	LevelStart			\Default Work Unit\LevelStart	
+	3858101368	TurnSignal			\Default Work Unit\TurnSignal	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1493153371	PlayerSpeed			\Default Work Unit\PlayerSpeed	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	207371283	4k-rpm-idle-loop	C:\Users\genna\Workspace\Pulse\Pulse_WwiseProject\.cache\41\{4196EB86-B40C-2953-440C-3BAE0C6EBE14}.wem		\Actor-Mixer Hierarchy\Default Work Unit\CarEngine\4k-rpm-idle-loop		624160
+	226987477	2k-rpm-idle-loop	C:\Users\genna\Workspace\Pulse\Pulse_WwiseProject\.cache\55\{5501CFDF-7CE5-2526-18E6-BF458F485DE2}.wem		\Actor-Mixer Hierarchy\Default Work Unit\CarEngine\2k-rpm-idle-loop		864160
+	377713728	ambience-loop_2	C:\Users\genna\Workspace\Pulse\Pulse_WwiseProject\.cache\65\{65F2B4BE-C115-2B65-0197-3E27625FE8F3}.wem		\Actor-Mixer Hierarchy\Default Work Unit\RoadAmbience\ambience-loop_2		37376160
+	423541099	3k-rpm-idle-loop	C:\Users\genna\Workspace\Pulse\Pulse_WwiseProject\.cache\61\{6110DD24-9149-F135-B7D2-E9A9CC7ABB1C}.wem		\Actor-Mixer Hierarchy\Default Work Unit\CarEngine\3k-rpm-idle-loop		768160
+	427793532	0k-rpm-idle-loop	C:\Users\genna\Workspace\Pulse\Pulse_WwiseProject\.cache\E9\{E941D5DF-BD0B-C384-127F-586030B40BB8}.wem		\Actor-Mixer Hierarchy\Default Work Unit\CarEngine\0k-rpm-idle-loop		1056160
+	473609348	TurnSignalOff	C:\Users\genna\Workspace\Pulse\Pulse_WwiseProject\.cache\F4\{F48A763C-42E1-E971-6429-5B2ADCA47703}.wem		\Actor-Mixer Hierarchy\Default Work Unit\TurnSignal\TurnSignalOff		62600
+	535750132	1k-rpm-idle-loop	C:\Users\genna\Workspace\Pulse\Pulse_WwiseProject\.cache\77\{779081D7-4713-A000-5263-E053AE4B5EC0}.wem		\Actor-Mixer Hierarchy\Default Work Unit\CarEngine\1k-rpm-idle-loop		960160
+	688959639	ambience-loop_1	C:\Users\genna\Workspace\Pulse\Pulse_WwiseProject\.cache\16\{164D85BB-46DE-5530-6229-AC4774293E8C}.wem		\Actor-Mixer Hierarchy\Default Work Unit\RoadAmbience\ambience-loop_1		13609252
+	984636645	5k-rpm-idle-loop	C:\Users\genna\Workspace\Pulse\Pulse_WwiseProject\.cache\EA\{EAD71E54-56B6-469F-C251-0D23170C7AD7}.wem		\Actor-Mixer Hierarchy\Default Work Unit\CarEngine\5k-rpm-idle-loop		432160
+

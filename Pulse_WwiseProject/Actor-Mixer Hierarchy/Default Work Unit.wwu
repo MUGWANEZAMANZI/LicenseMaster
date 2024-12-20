@@ -3,13 +3,13 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{A8681C96-2D69-4F34-8A7D-7701408A897A}" PersistMode="Standalone">
 			<ChildrenList>
-				<RandomSequenceContainer Name="sfx_ambience" ID="{076CBAE9-D8DF-4640-A3EC-3F1E828B1833}" ShortID="111796254">
+				<RandomSequenceContainer Name="RoadAmbience" ID="{076CBAE9-D8DF-4640-A3EC-3F1E828B1833}" ShortID="111796254">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
+							<ObjectRef Name="World" ID="{1155E6B3-44D9-4481-AED8-265F46D8399A}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -72,42 +72,28 @@
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
-				<Sound Name="sfx_turn-signal-loop" ID="{3905921C-BB07-4201-907E-E64BB7A675DE}" ShortID="775539824">
+				<BlendContainer Name="CarEngine" ID="{4D429D30-F4F6-4D04-B529-7A5560CBA2F0}" ShortID="297806385">
 					<PropertyList>
-						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="sfx_turn-signal-loop" ID="{A703DD26-5750-4B4F-9134-A8F029452D2C}">
-							<Language>SFX</Language>
-							<AudioFile>click-clack-loop.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="765596562"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="sfx_turn-signal-loop" ID="{A703DD26-5750-4B4F-9134-A8F029452D2C}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<BlendContainer Name="engineRPM" ID="{4D429D30-F4F6-4D04-B529-7A5560CBA2F0}" ShortID="297806385">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
+							<ObjectRef Name="World" ID="{1155E6B3-44D9-4481-AED8-265F46D8399A}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="0k-rpm-idle-loop" ID="{799C8BE8-137F-4967-9D62-07437C6D4F2E}" ShortID="51943111">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
@@ -130,6 +116,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="1k-rpm-idle-loop" ID="{3F670CA5-0E0C-49E6-95F1-E806EA0A441C}" ShortID="241107569">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
@@ -152,6 +141,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="2k-rpm-idle-loop" ID="{0EE1B82C-5A60-46AA-9B29-4C2E57CB457C}" ShortID="355173988">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
@@ -174,6 +166,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="3k-rpm-idle-loop" ID="{38108931-B8A6-4844-9B9A-3EDD05D91E9B}" ShortID="1014094034">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
@@ -196,6 +191,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="4k-rpm-idle-loop" ID="{467F9643-7A3F-4B48-AA0B-8C7C6CE5C3E4}" ShortID="388850526">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
@@ -218,6 +216,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="5k-rpm-idle-loop" ID="{5C3890EF-D097-4B6D-BBCF-E71E10EE2975}" ShortID="60696628">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
@@ -241,9 +242,131 @@
 						</Sound>
 					</ChildrenList>
 					<BlendTrackList>
-						<BlendTrack Name="engine-rpm" ID="{242996C8-0CA0-4A6A-8386-AF8E2191DAEE}" ShortID="670920383"/>
+						<BlendTrack Name="EngineRPM" ID="{E874A869-DC4E-4ECA-BA97-D418A7F21DA8}" ShortID="626210090">
+							<PropertyList>
+								<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="LayerCrossFadeControlInput">
+									<ObjectRef Name="PlayerSpeed" ID="{6D8A2DEB-1D37-4E0E-A9CA-0D986029453C}" WorkUnitID="{48779CF1-09FD-4278-8031-D5F86274207E}"/>
+								</Reference>
+							</ReferenceList>
+							<BlendTrackAssocList>
+								<BlendTrackAssoc>
+									<ItemRef Name="0k-rpm-idle-loop" ID="{799C8BE8-137F-4967-9D62-07437C6D4F2E}"/>
+									<CrossfadingInfo>
+										<LeftEdgePos>0</LeftEdgePos>
+										<LeftFadingMode>Automatic</LeftFadingMode>
+										<RightEdgePos>5</RightEdgePos>
+										<RightFadingMode>Automatic</RightFadingMode>
+									</CrossfadingInfo>
+								</BlendTrackAssoc>
+								<BlendTrackAssoc>
+									<ItemRef Name="1k-rpm-idle-loop" ID="{3F670CA5-0E0C-49E6-95F1-E806EA0A441C}"/>
+									<CrossfadingInfo>
+										<LeftEdgePos>5</LeftEdgePos>
+										<LeftFadingMode>Automatic</LeftFadingMode>
+										<RightEdgePos>25</RightEdgePos>
+										<RightFadingMode>Automatic</RightFadingMode>
+									</CrossfadingInfo>
+								</BlendTrackAssoc>
+								<BlendTrackAssoc>
+									<ItemRef Name="2k-rpm-idle-loop" ID="{0EE1B82C-5A60-46AA-9B29-4C2E57CB457C}"/>
+									<CrossfadingInfo>
+										<LeftEdgePos>25.0056923645107</LeftEdgePos>
+										<LeftFadingMode>Automatic</LeftFadingMode>
+										<RightEdgePos>40</RightEdgePos>
+										<RightFadingMode>Automatic</RightFadingMode>
+									</CrossfadingInfo>
+								</BlendTrackAssoc>
+								<BlendTrackAssoc>
+									<ItemRef Name="3k-rpm-idle-loop" ID="{38108931-B8A6-4844-9B9A-3EDD05D91E9B}"/>
+									<CrossfadingInfo>
+										<LeftEdgePos>40.0056923645107</LeftEdgePos>
+										<LeftFadingMode>Automatic</LeftFadingMode>
+										<RightEdgePos>55</RightEdgePos>
+										<RightFadingMode>Automatic</RightFadingMode>
+									</CrossfadingInfo>
+								</BlendTrackAssoc>
+								<BlendTrackAssoc>
+									<ItemRef Name="4k-rpm-idle-loop" ID="{467F9643-7A3F-4B48-AA0B-8C7C6CE5C3E4}"/>
+									<CrossfadingInfo>
+										<LeftEdgePos>55</LeftEdgePos>
+										<LeftFadingMode>Automatic</LeftFadingMode>
+										<RightEdgePos>70</RightEdgePos>
+										<RightFadingMode>Automatic</RightFadingMode>
+									</CrossfadingInfo>
+								</BlendTrackAssoc>
+								<BlendTrackAssoc>
+									<ItemRef Name="5k-rpm-idle-loop" ID="{5C3890EF-D097-4B6D-BBCF-E71E10EE2975}"/>
+									<CrossfadingInfo>
+										<LeftEdgePos>70</LeftEdgePos>
+										<LeftFadingMode>Automatic</LeftFadingMode>
+										<RightEdgePos>90</RightEdgePos>
+										<RightFadingMode>Automatic</RightFadingMode>
+									</CrossfadingInfo>
+								</BlendTrackAssoc>
+							</BlendTrackAssocList>
+						</BlendTrack>
 					</BlendTrackList>
 				</BlendContainer>
+				<Folder Name="TurnSignal" ID="{3B5BAD1C-24DD-4EAD-8492-3F088C21A7C6}" ShortID="893960170">
+					<ChildrenList>
+						<Sound Name="TurnSignalOn" ID="{3905921C-BB07-4201-907E-E64BB7A675DE}" ShortID="775539824">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="World" ID="{1155E6B3-44D9-4481-AED8-265F46D8399A}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_turn-signal-loop" ID="{A703DD26-5750-4B4F-9134-A8F029452D2C}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.100465677336616"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>click-clack-loop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="473609348"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_turn-signal-loop" ID="{A703DD26-5750-4B4F-9134-A8F029452D2C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="TurnSignalOff" ID="{8B28436D-5A6C-4C1C-91EF-2E1FA00F07CA}" ShortID="392640487">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="World" ID="{1155E6B3-44D9-4481-AED8-265F46D8399A}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_turn-signal-loop" ID="{798E0F45-6B0F-4ADD-8452-4F319250AF57}">
+									<PropertyList>
+										<Property Name="LoopEnd" Type="Real64" Value="0.424771323134252"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.351278550404502"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>click-clack-loop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="473609348"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_turn-signal-loop" ID="{798E0F45-6B0F-4ADD-8452-4F319250AF57}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="Project" SchemaVersion="123" WwiseVersion="v2024.1.1" WwiseBuild="8691">
+<WwiseDocument Type="Project" SchemaVersion="123" WwiseVersion="v2024.1.0" WwiseBuild="8669">
 	<ProjectInfo>
 		<Project Name="Pulse_WwiseProject" ID="{6E8EAE30-F0B9-490C-AFC8-573E19304433}">
 			<Platforms>
@@ -23,12 +23,13 @@
 				</Property>
 				<Property Name="ExternalSourcesOutputPath" Type="string">
 					<ValueList>
-						<Value Platform="Mac">GeneratedSoundBanks\Mac\</Value>
-						<Value Platform="Windows">GeneratedSoundBanks\Windows\</Value>
-						<Value Platform="Web">GeneratedSoundBanks\Web\</Value>
+						<Value Platform="Mac">GeneratedSoundBanks\Mac</Value>
+						<Value Platform="Windows">GeneratedSoundBanks\Windows</Value>
+						<Value Platform="Web">GeneratedSoundBanks\Web</Value>
 					</ValueList>
 				</Property>
-				<Property Name="SoundBankGenerateEstimatedDuration" Type="bool" Value="True" /><Property Name="GenerateSoundBankXML" Type="bool" Value="False" /><Property Name="SoundBankGenerateHeaderFile" Type="bool" Value="True" /><Property Name="SoundBankGenerateMaxAttenuationInfo" Type="bool" Value="True" /><Property Name="GenerateSoundBankJSON" Type="bool" Value="True" /><Property Name="SoundBankGeneratePrintGUID" Type="bool" Value="True" /><Property Name="SoundBankGeneratePrintPath" Type="bool" Value="True" /><Property Name="SoundBankHeaderFilePath" Type="string" Value="Z:/Users/danielramirez/Pulse/Assets/StreamingAssets/Audio/GeneratedSoundBanks" />
+				<Property Name="SoundBankGenerateHeaderFile" Type="bool" Value="True" />
+				<Property Name="SoundBankGenerateEstimatedDuration" Type="bool" Value="True" /><Property Name="SoundBankHeaderFilePath" Type="string" Value="Assets\StreamingAssets\Audio\GeneratedSoundBanks" />
 				<Property Name="SoundBankPaths" Type="string">
 					<ValueList>
 						<Value Platform="Mac">GeneratedSoundBanks\Mac\</Value>
@@ -66,6 +67,10 @@
 				</Property>
 				<Property Name="WwiseVersionWhenCreated" Type="string" Value="Branch=wwise_v2024.1.1|Build=8691|VersionName=v2024.1.1|Config=Release" />
 			</PropertyList>
+			<MiscSettings>
+				<MiscSettingEntry Name="Cache"><![CDATA[.cache]]></MiscSettingEntry>
+				<MiscSettingEntry Name="Originals"><![CDATA[Originals]]></MiscSettingEntry>
+			</MiscSettings>
 			<SharedValues>
 				<SharedPropertyList ClassName="AudioFileSource" PluginType="0" CompanyID="1" PluginID="0">
 					<PropertyList>
@@ -951,11 +956,6 @@
 							</ValueList>
 						</Property>
 						<Property Name="SoundBankGenerateMaxAttenuationInfo" Type="bool">
-							<ValueList>
-								<Value>True</Value>
-							</ValueList>
-						</Property>
-						<Property Name="SoundBankGeneratePrintColor" Type="bool">
 							<ValueList>
 								<Value>True</Value>
 							</ValueList>
@@ -6764,11 +6764,6 @@
 							</ValueList>
 						</Property>
 						<Property Name="SoundBankGenerateMaxAttenuationInfo" Type="bool">
-							<ValueList>
-								<Value>True</Value>
-							</ValueList>
-						</Property>
-						<Property Name="SoundBankGeneratePrintColor" Type="bool">
 							<ValueList>
 								<Value>True</Value>
 							</ValueList>

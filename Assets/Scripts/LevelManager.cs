@@ -15,6 +15,10 @@ public class LevelManager : MonoBehaviour
 
     [Header("References")]
     [SerializeField] public CarController player;
+
+    [Header("Wwise")]
+    [SerializeField] public AK.Wwise.Event LevelStart;
+
     public static LevelManager instance;
     private static int speedLimitDeduction = 5;
     private static int oneWayDeduction = 10;
@@ -40,6 +44,8 @@ public class LevelManager : MonoBehaviour
         {
             Debug.LogError("[" + name + "] Missing player reference on this GameOjbect.");
         }
+        
+        LevelStart.Post(gameObject);
     }
 
     void Update()

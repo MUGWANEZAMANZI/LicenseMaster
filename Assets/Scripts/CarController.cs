@@ -47,6 +47,11 @@ public class CarController : MonoBehaviour
   public GameObject rearRightMesh;
   public WheelCollider rearRightCollider;
 
+  [Header("Wwise")]
+  public AK.Wwise.Event CarEngineStart; 
+  public AK.Wwise.Event TurnSignal; 
+  public AK.Wwise.RTPC PlayerSpeed;
+
   [HideInInspector]
   public static float speed;
   [HideInInspector]
@@ -78,6 +83,7 @@ public class CarController : MonoBehaviour
   {
     rb = gameObject.GetComponent<Rigidbody>();
     rb.centerOfMass = bodyMassCenter;
+    CarEngineStart.Post(gameObject);
 
     //Initial setup to calculate the drift value of the car. This part could look a bit
     //complicated, but do not be afraid, the only thing we're doing here is to save the default
@@ -116,8 +122,10 @@ public class CarController : MonoBehaviour
   {
     // Calculate speed of car and set local velocity for reference.
     speed = ((2 * Mathf.PI * frontLeftCollider.radius * frontLeftCollider.rpm * 60) / 1000) / 2.5f; // Dividing by three for now just cause
+    PlayerSpeed.SetValue(gameObject, speed); // Set Wwise RTPC
     localVelocityX = transform.InverseTransformDirection(rb.velocity).x;
     localVelocityZ = transform.InverseTransformDirection(rb.velocity).z;
+
 
     // Accelerate
     if (Input.GetKey(KeyCode.W) && (!Input.GetKeyDown(KeyCode.Space) || !Input.GetKeyDown(KeyCode.S)))
@@ -186,6 +194,7 @@ public class CarController : MonoBehaviour
     leftBlinkerCoroutine = true;
     MeshRenderer blinker = LeftBlinker.GetComponent<MeshRenderer>();
     blinker.material = blinkerOn;
+    TurnSignal.Post(gameObject); // Send Wwise Event;
     yield return new WaitForSeconds(.5f);
     blinker.material = blinkerOff;
     yield return new WaitForSeconds(.5f);
@@ -197,6 +206,7 @@ public class CarController : MonoBehaviour
     rightBlinkerCoroutine = true;
     MeshRenderer blinker = RightBlinker.GetComponent<MeshRenderer>();
     blinker.material = blinkerOn;
+    TurnSignal.Post(gameObject); // Send Wwise Event;
     yield return new WaitForSeconds(.5f);
     blinker.material = blinkerOff;
     yield return new WaitForSeconds(.5f);
