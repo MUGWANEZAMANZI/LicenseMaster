@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E5FF49E0-91AB-46C9-A0A1-AD6D1EBC17D7}" SchemaVersion="123">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{E5FF49E0-91AB-46C9-A0A1-AD6D1EBC17D7}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="levelSet_ambience" ID="{2807A1F4-3A44-4642-9036-0C65DF1EFBDF}">
+					<ChildrenList>
+						<Action Name="" ID="{ABB4F93B-CC7D-48F6-ACBF-A60447CF48BA}" ShortID="376161299">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_ambience" ID="{076CBAE9-D8DF-4640-A3EC-3F1E828B1833}" WorkUnitID="{A8681C96-2D69-4F34-8A7D-7701408A897A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="turnSignal" ID="{174DE36F-CB14-496C-B9F1-AD52E32B501B}">
+					<ChildrenList>
+						<Action Name="" ID="{18DA6FD0-F6EA-4547-941D-DB5F9BF2AAA7}" ShortID="120805038">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_turn-signal-loop" ID="{3905921C-BB07-4201-907E-E64BB7A675DE}" WorkUnitID="{A8681C96-2D69-4F34-8A7D-7701408A897A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="engineRPM" ID="{67AB0336-8AA0-40D6-9C33-BCE9D9A283D5}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

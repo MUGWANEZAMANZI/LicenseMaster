@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A8681C96-2D69-4F34-8A7D-7701408A897A}" SchemaVersion="123">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{A8681C96-2D69-4F34-8A7D-7701408A897A}" PersistMode="Standalone">
+			<ChildrenList>
+				<RandomSequenceContainer Name="sfx_ambience" ID="{076CBAE9-D8DF-4640-A3EC-3F1E828B1833}" ShortID="111796254">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="ambience-loop_1" ID="{E1FA3134-BCDD-4093-815C-3DE6378C5911}" ShortID="469628603">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ambience-loop" ID="{ABA022CD-3FA9-48E7-90A3-EFF77AFC6D41}">
+									<PropertyList>
+										<Property Name="LoopEnd" Type="Real64" Value="70.88035"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>ambience-loop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="688959639"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ambience-loop" ID="{ABA022CD-3FA9-48E7-90A3-EFF77AFC6D41}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ambience-loop_2" ID="{4C5F2D09-31B7-48A7-8B96-5FD85282630D}" ShortID="729491002">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ambience-loop_2" ID="{CB1E7A4B-1258-4294-A9C2-31C673653941}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>ambience-loop_2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="377713728"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ambience-loop_2" ID="{CB1E7A4B-1258-4294-A9C2-31C673653941}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<Sound Name="sfx_turn-signal-loop" ID="{3905921C-BB07-4201-907E-E64BB7A675DE}" ShortID="775539824">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="sfx_turn-signal-loop" ID="{A703DD26-5750-4B4F-9134-A8F029452D2C}">
+							<Language>SFX</Language>
+							<AudioFile>click-clack-loop.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="765596562"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="sfx_turn-signal-loop" ID="{A703DD26-5750-4B4F-9134-A8F029452D2C}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<BlendContainer Name="engineRPM" ID="{4D429D30-F4F6-4D04-B529-7A5560CBA2F0}" ShortID="297806385">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="0k-rpm-idle-loop" ID="{799C8BE8-137F-4967-9D62-07437C6D4F2E}" ShortID="51943111">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="0k-rpm-idle-loop" ID="{3948E371-3467-4348-BE7E-79AB23771A91}">
+									<Language>SFX</Language>
+									<AudioFile>0k-rpm-idle-loop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="427793532"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="0k-rpm-idle-loop" ID="{3948E371-3467-4348-BE7E-79AB23771A91}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="1k-rpm-idle-loop" ID="{3F670CA5-0E0C-49E6-95F1-E806EA0A441C}" ShortID="241107569">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="1k-rpm-idle-loop" ID="{DA071595-ECFF-4C6C-8EFF-8A99FB3E03FA}">
+									<Language>SFX</Language>
+									<AudioFile>1k-rpm-idle-loop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="535750132"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="1k-rpm-idle-loop" ID="{DA071595-ECFF-4C6C-8EFF-8A99FB3E03FA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="2k-rpm-idle-loop" ID="{0EE1B82C-5A60-46AA-9B29-4C2E57CB457C}" ShortID="355173988">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="2k-rpm-idle-loop" ID="{446799D2-3EDD-4103-B864-556BD688DBFF}">
+									<Language>SFX</Language>
+									<AudioFile>2k-rpm-idle-loop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="226987477"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="2k-rpm-idle-loop" ID="{446799D2-3EDD-4103-B864-556BD688DBFF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="3k-rpm-idle-loop" ID="{38108931-B8A6-4844-9B9A-3EDD05D91E9B}" ShortID="1014094034">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="3k-rpm-idle-loop" ID="{B6801FBF-B937-4F8E-AD92-2EDEA76A4734}">
+									<Language>SFX</Language>
+									<AudioFile>3k-rpm-idle-loop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="423541099"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="3k-rpm-idle-loop" ID="{B6801FBF-B937-4F8E-AD92-2EDEA76A4734}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="4k-rpm-idle-loop" ID="{467F9643-7A3F-4B48-AA0B-8C7C6CE5C3E4}" ShortID="388850526">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="4k-rpm-idle-loop" ID="{C668DEEA-A56A-470A-AD81-51CA94D52FCB}">
+									<Language>SFX</Language>
+									<AudioFile>4k-rpm-idle-loop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="207371283"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="4k-rpm-idle-loop" ID="{C668DEEA-A56A-470A-AD81-51CA94D52FCB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="5k-rpm-idle-loop" ID="{5C3890EF-D097-4B6D-BBCF-E71E10EE2975}" ShortID="60696628">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="5k-rpm-idle-loop" ID="{592612A1-931E-4BCD-BD2C-DEC496E6F9DD}">
+									<Language>SFX</Language>
+									<AudioFile>5k-rpm-idle-loop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="984636645"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="5k-rpm-idle-loop" ID="{592612A1-931E-4BCD-BD2C-DEC496E6F9DD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<BlendTrackList>
+						<BlendTrack Name="engine-rpm" ID="{242996C8-0CA0-4A6A-8386-AF8E2191DAEE}" ShortID="670920383"/>
+					</BlendTrackList>
+				</BlendContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
