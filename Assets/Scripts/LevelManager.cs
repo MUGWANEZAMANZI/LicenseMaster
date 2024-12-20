@@ -9,8 +9,9 @@ public class LevelManager : MonoBehaviour
 
     [Header("Level Info")]
     [SerializeField] public int points = 100;
+    [SerializeField] public int violations = 0;
     [SerializeField] public float elapsedTime = 0f;
-    [SerializeField] public float currentZoneSpeedLimit = 40f;
+    [SerializeField] public float currentZoneSpeedLimit = 30f;
 
     [Header("References")]
     [SerializeField] public CarController player;
@@ -56,6 +57,7 @@ public class LevelManager : MonoBehaviour
         if (player.offRoad)
         {
             points -= speedLimitDeduction;
+            violations++;
             // TODO display visual and update HUD elements
         }
         offRoadViolationCoroutine = false;
@@ -69,6 +71,7 @@ public class LevelManager : MonoBehaviour
         if (CarController.speed > currentZoneSpeedLimit)
         {
             points -= speedLimitDeduction;
+            violations++;
             // TODO display visual and update HUD elements
         }
         speedLimitViolationCoroutine = false;
@@ -77,5 +80,6 @@ public class LevelManager : MonoBehaviour
     public void CollisionViolation()
     {
         points -= collisionDeduction;
+        violations++;
     }
 }

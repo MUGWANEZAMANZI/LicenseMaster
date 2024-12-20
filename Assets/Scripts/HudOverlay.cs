@@ -7,6 +7,7 @@ public class HudOverlay : MonoBehaviour
     [Header("References")]
     [SerializeField] public TextMeshProUGUI speedText;
     [SerializeField] public TextMeshProUGUI scoreText;
+    [SerializeField] public TextMeshProUGUI violationsText;
 
 
     // Update is called once per frame
@@ -19,6 +20,7 @@ public class HudOverlay : MonoBehaviour
     {
         speedText.text = "Speed: " + CarController.speed.ToString("0") + "Km/h";
         scoreText.text = "Score: " + LevelManager.instance.points;
+        violationsText.text = "Violations: " + LevelManager.instance.violations;
 
         if (CarController.speed > LevelManager.instance.currentZoneSpeedLimit)
         {
@@ -26,7 +28,7 @@ public class HudOverlay : MonoBehaviour
         }
         else
         {
-            speedText.color = Color.white;
+            speedText.color = Color.black;
         }
     }
 }

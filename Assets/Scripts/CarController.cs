@@ -115,12 +115,12 @@ public class CarController : MonoBehaviour
   void Update()
   {
     // Calculate speed of car and set local velocity for reference.
-    speed = ((2 * Mathf.PI * frontLeftCollider.radius * frontLeftCollider.rpm * 60) / 1000) / 3; // Dividing by three for now just cause
+    speed = ((2 * Mathf.PI * frontLeftCollider.radius * frontLeftCollider.rpm * 60) / 1000) / 2.5f; // Dividing by three for now just cause
     localVelocityX = transform.InverseTransformDirection(rb.velocity).x;
     localVelocityZ = transform.InverseTransformDirection(rb.velocity).z;
 
     // Accelerate
-    if (Input.GetKey(KeyCode.W))
+    if (Input.GetKey(KeyCode.W) && (!Input.GetKeyDown(KeyCode.Space) || !Input.GetKeyDown(KeyCode.S)))
     {
       CancelInvoke("DecelerateCar");
       deceleratingCar = false;
@@ -155,6 +155,11 @@ public class CarController : MonoBehaviour
       rightBlinkerOn = false;
     }
 
+    if (Input.GetKeyDown(KeyCode.Space))
+    {
+      Brakes();
+    }
+
     // Coast
     if ((!Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W))) ThrottleOff();
 
@@ -167,8 +172,8 @@ public class CarController : MonoBehaviour
     if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && steeringAxis != 0f) ResetSteeringAngle();
 
     // Brake Lights
-    if (Input.GetKeyDown(KeyCode.S)) BrakeLight.GetComponent<MeshRenderer>().material = blinkerOn;
-    if (Input.GetKeyUp(KeyCode.S)) BrakeLight.GetComponent<MeshRenderer>().material = blinkerOff;
+    if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.Space)) BrakeLight.GetComponent<MeshRenderer>().material = blinkerOn;
+    if (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.Space)) BrakeLight.GetComponent<MeshRenderer>().material = blinkerOff;
 
     // Turn and rotate wheels
     AnimateWheelMeshes();
