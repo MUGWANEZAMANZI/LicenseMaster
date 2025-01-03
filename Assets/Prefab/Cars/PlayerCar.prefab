@@ -502,7 +502,7 @@ GameObject:
   - component: {fileID: 621040382440045383}
   m_Layer: 0
   m_Name: PlayerCar
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -677,6 +677,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 427547414253712139, guid: 41a070f7e1c401249bf1d29dcf31f9da, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 642287924342879162, guid: 41a070f7e1c401249bf1d29dcf31f9da, type: 3}
       propertyPath: m_Name
       value: Car
@@ -716,6 +720,14 @@ PrefabInstance:
     - target: {fileID: 7877667524431639919, guid: 41a070f7e1c401249bf1d29dcf31f9da, type: 3}
       propertyPath: m_Radius
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7952020342351732529, guid: 41a070f7e1c401249bf1d29dcf31f9da, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7952020342351732529, guid: 41a070f7e1c401249bf1d29dcf31f9da, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8615825633152659129, guid: 41a070f7e1c401249bf1d29dcf31f9da, type: 3}
       propertyPath: m_Radius

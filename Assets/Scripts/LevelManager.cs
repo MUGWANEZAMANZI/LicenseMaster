@@ -25,6 +25,7 @@ public class LevelManager : MonoBehaviour
     private static int roundAboutDection = 5;
     private static int timeDeduction = 10;
     private static int offRoadDeduction = 5;
+    private static int stopZoneDeduction = 10;
     private static int collisionDeduction = 10;
 
 
@@ -83,9 +84,15 @@ public class LevelManager : MonoBehaviour
         speedLimitViolationCoroutine = false;
     }
 
+    public void StopZoneViolation()
+    {
+        points -= stopZoneDeduction;
+        violations++;
+    }
+
     public void CollisionViolation()
     {
         points -= collisionDeduction;
         violations++;
     }
-}
+}   
