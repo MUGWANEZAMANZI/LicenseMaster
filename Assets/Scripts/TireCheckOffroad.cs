@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class TireCheckOffroad : MonoBehaviour
@@ -14,18 +13,14 @@ public class TireCheckOffroad : MonoBehaviour
                 .transform.parent.gameObject.GetComponent<CarController>();
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collider)
     {
-        // if (name == "FrontRightWheel")
-        // {
-            Debug.Log(name + "Is colliding with - " + collision.gameObject.tag);
-        // }
-        if (collision.gameObject.tag != "Terrain")
+        if (collider.gameObject.tag == "Road")
         {
-            if (player.wheelsOffRoad.Exists(wheel => wheel == name)) player.wheelsOffRoad.Remove(name);
+            player.wheelsOffRoad.RemoveAll(wheel => wheel == this.name);
             return;
         }
-        Debug.Log(name + " tire is offroad!");
+        Debug.Log(name + " is offroad!");
         if (!player.wheelsOffRoad.Exists(wheel => wheel == name)) player.wheelsOffRoad.Add(name);
     }
 }

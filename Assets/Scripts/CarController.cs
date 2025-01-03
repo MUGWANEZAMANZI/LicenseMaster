@@ -126,6 +126,14 @@ public class CarController : MonoBehaviour
     localVelocityX = transform.InverseTransformDirection(rb.velocity).x;
     localVelocityZ = transform.InverseTransformDirection(rb.velocity).z;
 
+    if (wheelsOffRoad.Count > 2)
+    { 
+      offRoad = true; 
+    }
+    else
+    {
+      offRoad = false;
+    }
 
     // Accelerate
     if (Input.GetKey(KeyCode.W) && (!Input.GetKeyDown(KeyCode.Space) || !Input.GetKeyDown(KeyCode.S)))
