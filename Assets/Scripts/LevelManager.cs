@@ -32,6 +32,7 @@ public class LevelManager : MonoBehaviour
     // Private Vars
     private bool speedLimitViolationCoroutine = false;
     private bool offRoadViolationCoroutine = false;
+    private bool oneWayViolationCoroutine = false;
 
 
     private void Awake()
@@ -54,6 +55,21 @@ public class LevelManager : MonoBehaviour
         // Speed Check
         if (CarController.speed > currentZoneSpeedLimit && !speedLimitViolationCoroutine) StartCoroutine(SpeedLimitViolation());
         if (player.offRoad && !offRoadViolationCoroutine) StartCoroutine(OffRoadViolation());
+        if (player.wrongWay && !oneWayViolationCoroutine) StartCoroutine(OneWayViolation());
+    }
+
+    private IEnumerator OneWayViolation()
+    {
+        oneWayViolationCoroutine = true;
+        // TODO Display Warning on UI
+        yield return new WaitForSeconds(5f);
+        if (player.wrongWay)
+        {
+            points -= oneWayDeduction;
+            violations++;
+            // TODO display visual and update HUD elements
+        }
+        oneWayViolationCoroutine = false;
     }
 
     private IEnumerator OffRoadViolation()

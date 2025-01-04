@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class CarController : MonoBehaviour
 {
+  [Header("Camera")]
+  [SerializeField] public Camera cam;
 
   [Header("Car Params")]
   [Range(20, 190)]
@@ -26,6 +28,7 @@ public class CarController : MonoBehaviour
   [SerializeField] public bool leftBlinkerOn;
   [SerializeField] public bool rightBlinkerOn;
   [SerializeField] public bool offRoad;
+  [SerializeField] public bool wrongWay = false;
 
   [SerializeField] public List<string> wheelsOffRoad = new List<string>();
 
@@ -63,8 +66,8 @@ public class CarController : MonoBehaviour
   public static float steeringAxis; // Represents the steering wheel. Values from -1 to 1.
   private float throttleAxis; // Used to know whether the throttle has reached the maximum value. It goes from -1 to 1.
   private float driftingAxis;
-  private float localVelocityZ;
-  private float localVelocityX;
+  public static float localVelocityZ;
+  public static float localVelocityX;
   private bool deceleratingCar;
   private bool touchControlsSetup = false;
   private bool leftBlinkerCoroutine = false;
@@ -79,6 +82,10 @@ public class CarController : MonoBehaviour
   WheelFrictionCurve RRwheelFriction;
   float RRWextremumSlip;
 
+  void Awake()
+  {
+    cam.cullingMask = 31;
+  }
   void Start()
   {
     rb = gameObject.GetComponent<Rigidbody>();

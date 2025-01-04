@@ -3,11 +3,11 @@ using UnityEngine;
 public class StopZone : MonoBehaviour
 {
     private bool playerHasStopped = false;
-    private bool playerHasEnteredStopZone = true;
+    private bool playerHasEnteredZone = true;
 
     void Update()
     {
-        if ( !playerHasEnteredStopZone ) return;
+        if ( !playerHasEnteredZone ) return;
 
         if (CarController.speed <= .5 ) playerHasStopped = true;
     }
@@ -17,7 +17,7 @@ public class StopZone : MonoBehaviour
         if (collider.gameObject.tag == "Player")
         {
             playerHasStopped = false;
-            playerHasEnteredStopZone = true;
+            playerHasEnteredZone = true;
         }
     }
 
