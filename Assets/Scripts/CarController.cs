@@ -91,38 +91,6 @@ public class CarController : MonoBehaviour
     rb = gameObject.GetComponent<Rigidbody>();
     rb.centerOfMass = bodyMassCenter;
     CarEngineStart.Post(gameObject);
-
-    //Initial setup to calculate the drift value of the car. This part could look a bit
-    //complicated, but do not be afraid, the only thing we're doing here is to save the default
-    //friction values of the car wheels so we can set an appropiate drifting value later.
-    FLwheelFriction = new WheelFrictionCurve();
-    FLwheelFriction.extremumSlip = frontLeftCollider.sidewaysFriction.extremumSlip;
-    FLWextremumSlip = frontLeftCollider.sidewaysFriction.extremumSlip;
-    FLwheelFriction.extremumValue = frontLeftCollider.sidewaysFriction.extremumValue;
-    FLwheelFriction.asymptoteSlip = frontLeftCollider.sidewaysFriction.asymptoteSlip;
-    FLwheelFriction.asymptoteValue = frontLeftCollider.sidewaysFriction.asymptoteValue;
-    FLwheelFriction.stiffness = frontLeftCollider.sidewaysFriction.stiffness;
-    FRwheelFriction = new WheelFrictionCurve();
-    FRwheelFriction.extremumSlip = frontRightCollider.sidewaysFriction.extremumSlip;
-    FRWextremumSlip = frontRightCollider.sidewaysFriction.extremumSlip;
-    FRwheelFriction.extremumValue = frontRightCollider.sidewaysFriction.extremumValue;
-    FRwheelFriction.asymptoteSlip = frontRightCollider.sidewaysFriction.asymptoteSlip;
-    FRwheelFriction.asymptoteValue = frontRightCollider.sidewaysFriction.asymptoteValue;
-    FRwheelFriction.stiffness = frontRightCollider.sidewaysFriction.stiffness;
-    RLwheelFriction = new WheelFrictionCurve();
-    RLwheelFriction.extremumSlip = rearLeftCollider.sidewaysFriction.extremumSlip;
-    RLWextremumSlip = rearLeftCollider.sidewaysFriction.extremumSlip;
-    RLwheelFriction.extremumValue = rearLeftCollider.sidewaysFriction.extremumValue;
-    RLwheelFriction.asymptoteSlip = rearLeftCollider.sidewaysFriction.asymptoteSlip;
-    RLwheelFriction.asymptoteValue = rearLeftCollider.sidewaysFriction.asymptoteValue;
-    RLwheelFriction.stiffness = rearLeftCollider.sidewaysFriction.stiffness;
-    RRwheelFriction = new WheelFrictionCurve();
-    RRwheelFriction.extremumSlip = rearRightCollider.sidewaysFriction.extremumSlip;
-    RRWextremumSlip = rearRightCollider.sidewaysFriction.extremumSlip;
-    RRwheelFriction.extremumValue = rearRightCollider.sidewaysFriction.extremumValue;
-    RRwheelFriction.asymptoteSlip = rearRightCollider.sidewaysFriction.asymptoteSlip;
-    RRwheelFriction.asymptoteValue = rearRightCollider.sidewaysFriction.asymptoteValue;
-    RRwheelFriction.stiffness = rearRightCollider.sidewaysFriction.stiffness;
   }
 
   void Update()
