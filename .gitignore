@@ -80,7 +80,7 @@ crashlytics-build.properties
 *.prof
 *.validationcache
 *.wsettings
-
+Assets/Wwise/**/*.asset
 # build stuff (unsure?)
 # Assets/Wwise/Deployment/Plugins/Windows/**/*.meta
 

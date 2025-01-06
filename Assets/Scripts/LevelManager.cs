@@ -1,7 +1,4 @@
-using System;
 using System.Collections;
-using System.Drawing;
-using JetBrains.Annotations;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
@@ -15,6 +12,8 @@ public class LevelManager : MonoBehaviour
 
     [Header("References")]
     [SerializeField] public CarController player;
+    [SerializeField] public Canvas HudOverlay;
+    [SerializeField] public GameObject violationTextPrefab;
 
     [Header("Wwise")]
     [SerializeField] public AK.Wwise.Event LevelStart;
@@ -30,10 +29,11 @@ public class LevelManager : MonoBehaviour
 
 
     // Private Vars
-    private bool speedLimitViolationCoroutine = false;
-    private bool offRoadViolationCoroutine = false;
-    private bool oneWayViolationCoroutine = false;
-
+    public bool speedLimitViolationCoroutine = false;
+    public bool offRoadViolationCoroutine = false;
+    public bool oneWayViolationCoroutine = false;
+    public bool collisionViolationCoroutine = false;
+    public bool stopViolationCoroutine = false;
 
     private void Awake()
     {
@@ -60,54 +60,79 @@ public class LevelManager : MonoBehaviour
 
     private IEnumerator OneWayViolation()
     {
+        Debug.Log(message: "Hit!");
         oneWayViolationCoroutine = true;
-        // TODO Display Warning on UI
+        GameObject warning = Instantiate(violationTextPrefab, new Vector3(HudOverlay.transform.position.x, 300, HudOverlay.transform.position.z), HudOverlay.transform.rotation, HudOverlay.transform);
+        warning.GetComponent<ViolationDialogWarning>().text.text = "Wrong Way";
         yield return new WaitForSeconds(5f);
         if (player.wrongWay)
         {
             points -= oneWayDeduction;
             violations++;
-            // TODO display visual and update HUD elements
         }
         oneWayViolationCoroutine = false;
+        Destroy(warning);
     }
 
     private IEnumerator OffRoadViolation()
     {
         offRoadViolationCoroutine = true;
-        // TODO Display Warning on UI
-        yield return new WaitForSeconds(5f);
+        GameObject warning = Instantiate(violationTextPrefab, new Vector3(HudOverlay.transform.position.x, 300, HudOverlay.transform.position.z), HudOverlay.transform.rotation, HudOverlay.transform);
+        warning.GetComponent<ViolationDialogWarning>().text.text = "Return to Road";
+        yield return new WaitForSeconds(3f);
         if (player.offRoad)
         {
             points -= speedLimitDeduction;
             violations++;
-            // TODO display visual and update HUD elements
         }
         offRoadViolationCoroutine = false;
+        Destroy(warning);
     }
 
     private IEnumerator SpeedLimitViolation()
     {
         speedLimitViolationCoroutine = true;
-        // TODO Display Warning on UI
+        GameObject warning = Instantiate(violationTextPrefab, new Vector3(HudOverlay.transform.position.x, 300, HudOverlay.transform.position.z), HudOverlay.transform.rotation, HudOverlay.transform);
+        warning.GetComponent<ViolationDialogWarning>().text.text = "Decrease Speed";
         yield return new WaitForSeconds(3f);
         if (CarController.speed > currentZoneSpeedLimit)
         {
             points -= speedLimitDeduction;
             violations++;
-            // TODO display visual and update HUD elements
         }
         speedLimitViolationCoroutine = false;
+        Destroy(warning);
+    }
+
+    private IEnumerator CollisionViolationDebounce()
+    {
+        collisionViolationCoroutine = true;
+        GameObject warning = Instantiate(violationTextPrefab, new Vector3(HudOverlay.transform.position.x, 300, HudOverlay.transform.position.z), HudOverlay.transform.rotation, HudOverlay.transform);
+        warning.GetComponent<ViolationDialogWarning>().text.text = "Avoid Collisions";
+        yield return new WaitForSeconds(1f);
+        collisionViolationCoroutine = false;
+    }
+    private IEnumerator StopViolationDebounce()
+    {
+        stopViolationCoroutine = true;
+        GameObject warning = Instantiate(violationTextPrefab, new Vector3(HudOverlay.transform.position.x, 300, HudOverlay.transform.position.z), HudOverlay.transform.rotation, HudOverlay.transform);
+        warning.GetComponent<ViolationDialogWarning>().text.text = "Failed Stop";
+        yield return new WaitForSeconds(1f);
+        stopViolationCoroutine = false;
     }
 
     public void StopZoneViolation()
     {
+        if (stopViolationCoroutine) return;
+        StartCoroutine(StopViolationDebounce());
         points -= stopZoneDeduction;
         violations++;
     }
 
     public void CollisionViolation()
     {
+        if (collisionViolationCoroutine) return;
+        StartCoroutine(CollisionViolationDebounce());
         points -= collisionDeduction;
         violations++;
     }

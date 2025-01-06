@@ -2,8 +2,13 @@ using UnityEngine;
 
 public class OneWayZone : MonoBehaviour
 {
-    [SerializeField] public CarController player;
-    private bool playerEnteredZone = true;
+    private bool playerEnteredZone = false;
+    private CarController player;
+
+    void Start()
+    {
+        player = GameObject.Find("Car").GetComponent<CarController>();
+    }
 
     void Update()
     {
