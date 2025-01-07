@@ -14,7 +14,7 @@ public class OneWayZone : MonoBehaviour
     {
         DrawArrow.ForDebug(transform.position, transform.forward * 30, Color.red, 5);
         if (!playerEnteredZone) return;
-        if (Vector3.Dot(player.GetComponent<Rigidbody>().velocity.normalized, Vector3.forward) > .5f)
+        if (Vector3.Dot(player.GetComponent<Rigidbody>().velocity.normalized, Vector3.forward) < .5f)
         {
             player.wrongWay = true;
         } else {
@@ -33,5 +33,6 @@ public class OneWayZone : MonoBehaviour
     void OnTriggerExit(Collider collider)
     {
         player.wrongWay = false;
+        playerEnteredZone = false;
     }
 }

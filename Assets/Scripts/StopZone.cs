@@ -3,7 +3,7 @@ using UnityEngine;
 public class StopZone : MonoBehaviour
 {
     private bool playerHasStopped = false;
-    private bool playerHasEnteredZone = true;
+    private bool playerHasEnteredZone = false;
 
     void Update()
     {

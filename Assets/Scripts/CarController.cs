@@ -101,7 +101,7 @@ public class CarController : MonoBehaviour
     localVelocityX = transform.InverseTransformDirection(rb.velocity).x;
     localVelocityZ = transform.InverseTransformDirection(rb.velocity).z;
 
-    if (wheelsOffRoad.Count > 2)
+    if (wheelsOffRoad.Count > 1)
     { 
       offRoad = true; 
     }
