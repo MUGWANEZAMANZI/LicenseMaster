@@ -2,12 +2,11 @@ using UnityEngine;
 
 public class LevelEndZone : MonoBehaviour
 {
-    private GameObject levelEndScreen;
+    [SerializeField] public GameObject levelEndScreen;
     private bool playerHasEnteredZone = false;
     
     void Start() 
     {
-        levelEndScreen = GameObject.Find("LevelCompleteDialog");
     }
 
     void Update()

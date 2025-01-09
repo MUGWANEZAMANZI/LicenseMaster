@@ -1526,8 +1526,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000086104, y: 121}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 1.7325, y: 121}
+  m_SizeDelta: {x: 541.84, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5888091718063101170
 CanvasRenderer:
@@ -2209,7 +2209,7 @@ GameObject:
   - component: {fileID: 7801722253282744760}
   - component: {fileID: 5977344917171453155}
   m_Layer: 0
-  m_Name: LevelCompleteDialog
+  m_Name: LevelCompleteScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3607,8 +3607,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000086104, y: -188}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -0.00043285, y: -188}
+  m_SizeDelta: {x: 545.3, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6686148118308059914
 CanvasRenderer:

@@ -20,7 +20,7 @@ public class HudOverlay : MonoBehaviour
     {
         speedText.text = "Speed: " + CarController.speed.ToString("0") + "Km/h";
         scoreText.text = "Score: " + LevelManager.instance.points;
-        violationsText.text = "Violations: " + LevelManager.instance.violations;
+        violationsText.text = "Violations: " + LevelManager.instance.incuredViolations.Count;
         speedText.color = CarController.speed > LevelManager.instance.currentZoneSpeedLimit ? Color.red : Color.black;
     }
 }
