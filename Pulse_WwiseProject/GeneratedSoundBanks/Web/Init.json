@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{968B0C8E-7D2B-7823-0A34-CC2618DF3734}",
+    "Hash": "{4D1805E5-5477-43C8-970F-7A6F67FB731A}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -73,9 +73,39 @@
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\PlayerSpeed",
       "GUID": "{6D8A2DEB-1D37-4E0E-A9CA-0D986029453C}"
      }
+    ],
+    "StateGroups": [
+     {
+      "Id": "4221175997",
+      "Name": "RadioOff",
+      "ObjectPath": "\\States\\Default Work Unit\\RadioOff",
+      "GUID": "{D9867B6E-E166-4ACE-9014-6505D20ED679}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\RadioOff\\None",
+        "GUID": "{74F05BD3-34E0-418E-A2AA-A09B040209FB}"
+       }
+      ]
+     },
+     {
+      "Id": "4245784721",
+      "Name": "RadioOn",
+      "ObjectPath": "\\States\\Default Work Unit\\RadioOn",
+      "GUID": "{EEC0C33F-019B-42EF-8BF8-AD06DE3CB22B}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\RadioOn\\None",
+        "GUID": "{CB2B3911-B58F-44B8-A23D-DC1268F1C611}"
+       }
+      ]
+     }
     ]
    }
   ],
-  "FileHash": "{C8A763ED-D084-92C5-3C69-54028A989830}"
+  "FileHash": "{E8CEA741-232A-3D94-5A55-66811640EDB5}"
  }
 }

@@ -46,6 +46,67 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="RadioStart" ID="{457126EF-2F31-48E6-A415-3F07A7C38B4D}">
+					<ChildrenList>
+						<Action Name="" ID="{84CBED9D-673D-4703-A3B8-D9AF8DAA7634}" ShortID="134505648">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="radio-button" ID="{631F175C-D5E5-4681-B766-41583626D73E}" WorkUnitID="{A8681C96-2D69-4F34-8A7D-7701408A897A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{00ABE7A6-A827-4EE7-9919-A104DAF2131C}" ShortID="217362309">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CarRadio" ID="{95075E11-69FC-4CE7-B474-DC130FC3B318}" WorkUnitID="{366AE488-9C3F-4F26-98BC-E954D189A8AA}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MenuClick" ID="{E68AF364-669F-4862-B897-2DFAC4F6E9A7}">
+					<ChildrenList>
+						<Action Name="" ID="{1D4DBB78-0108-4419-AC41-6E1F3C33467E}" ShortID="345813872">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="knock" ID="{170A6980-1C19-4A05-98EC-658F677326D8}" WorkUnitID="{A8681C96-2D69-4F34-8A7D-7701408A897A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="TriggerAlert" ID="{2E60027A-973F-44A1-B5B7-C3DC4C78FDC6}">
+					<ChildrenList>
+						<Action Name="" ID="{836AC85E-59D9-489A-8E88-2A5609ACEACE}" ShortID="905936257">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI-Alert" ID="{436486A5-9D1B-4A7C-9A46-E29205337587}" WorkUnitID="{A8681C96-2D69-4F34-8A7D-7701408A897A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="RadioStop" ID="{C5953374-B7C5-4661-B706-10CEA165BB18}">
+					<ChildrenList>
+						<Action Name="" ID="{BC72EF44-5919-4D02-A23E-6D1416528394}" ShortID="563039765">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="radio-button" ID="{631F175C-D5E5-4681-B766-41583626D73E}" WorkUnitID="{A8681C96-2D69-4F34-8A7D-7701408A897A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{EEC5786C-E481-4340-8D89-02EBD30C53A0}" ShortID="542774174">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CarRadio" ID="{95075E11-69FC-4CE7-B474-DC130FC3B318}" WorkUnitID="{366AE488-9C3F-4F26-98BC-E954D189A8AA}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

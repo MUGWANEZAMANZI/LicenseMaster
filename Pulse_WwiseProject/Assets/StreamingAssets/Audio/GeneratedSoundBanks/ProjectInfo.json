@@ -3,7 +3,7 @@
   "Project": {
    "Name": "Pulse_WwiseProject",
    "GUID": "{6E8EAE30-F0B9-490C-AFC8-573E19304433}",
-   "Generator": "2024.1.0.8669"
+   "Generator": "2024.1.1.8691"
   },
   "CacheRoot": "../../../../.cache",
   "Platforms": [
@@ -38,6 +38,6 @@
     "UseAsStandIn": "true"
    }
   ],
-  "FileHash": "{944341DB-9035-CA3E-01C7-3C143C1BB2E6}"
+  "FileHash": "{72C1E615-F989-378D-57FA-AC3CEEC72B09}"
  }
 }
