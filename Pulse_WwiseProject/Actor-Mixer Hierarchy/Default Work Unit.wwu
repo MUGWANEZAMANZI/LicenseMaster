@@ -75,7 +75,6 @@
 				<BlendContainer Name="CarEngine" ID="{4D429D30-F4F6-4D04-B529-7A5560CBA2F0}" ShortID="297806385">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
-						<Property Name="BlendBehavior" Type="int16" Value="1"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-10</Value>
@@ -94,11 +93,6 @@
 						<Sound Name="0k-rpm-idle-loop" ID="{799C8BE8-137F-4967-9D62-07437C6D4F2E}" ShortID="51943111">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>5</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -124,11 +118,6 @@
 						<Sound Name="1k-rpm-idle-loop" ID="{3F670CA5-0E0C-49E6-95F1-E806EA0A441C}" ShortID="241107569">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>3</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -179,11 +168,6 @@
 						<Sound Name="3k-rpm-idle-loop" ID="{38108931-B8A6-4844-9B9A-3EDD05D91E9B}" ShortID="1014094034">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>3</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -256,128 +240,6 @@
 								<ActiveSource Name="5k-rpm-idle-loop" ID="{592612A1-931E-4BCD-BD2C-DEC496E6F9DD}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="gear-shift-1" ID="{7D7FE47F-E3AE-445B-AB5D-31BF5E4D2E02}" ShortID="1054833962">
-							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="World" ID="{1155E6B3-44D9-4481-AED8-265F46D8399A}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="gear-shift-1" ID="{6046ABE4-D561-4B33-B3E8-0D178DE8FD3F}">
-									<Language>SFX</Language>
-									<AudioFile>gear-shift-1.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="894716371"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="gear-shift-1" ID="{6046ABE4-D561-4B33-B3E8-0D178DE8FD3F}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="gear-shift-2" ID="{F56D99F1-DC0F-4C1B-985D-1ED7176476A2}" ShortID="230439053">
-							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="World" ID="{1155E6B3-44D9-4481-AED8-265F46D8399A}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="gear-shift-2" ID="{58132BF1-320B-43E0-B724-1DC07E68B530}">
-									<Language>SFX</Language>
-									<AudioFile>gear-shift-2.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="54888788"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="gear-shift-2" ID="{58132BF1-320B-43E0-B724-1DC07E68B530}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="gear-shift-3" ID="{0DB7CB36-DE96-4D27-820F-9E341C1F0BC0}" ShortID="433684108">
-							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="World" ID="{1155E6B3-44D9-4481-AED8-265F46D8399A}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="gear-shift-3" ID="{8059284E-1B17-4B30-9DE3-18BF9D0566E8}">
-									<Language>SFX</Language>
-									<AudioFile>gear-shift-3.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="152114452"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="gear-shift-3" ID="{8059284E-1B17-4B30-9DE3-18BF9D0566E8}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="gear-shift-4" ID="{30AA8A9D-D6D7-4861-933D-94DC6677EFDC}" ShortID="848406065">
-							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="World" ID="{1155E6B3-44D9-4481-AED8-265F46D8399A}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="gear-shift-4" ID="{AD256FF1-CC5B-461D-96FB-9796B99B2320}">
-									<Language>SFX</Language>
-									<AudioFile>gear-shift-4.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="605112290"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="gear-shift-4" ID="{AD256FF1-CC5B-461D-96FB-9796B99B2320}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="gear-shift-5" ID="{EFD6A835-DB5B-469C-B98E-48F86EC031EF}" ShortID="223026575">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="gear-shift-5" ID="{4A4604E1-2FAF-4A3C-97AB-8C8C30AAE2C6}">
-									<Language>SFX</Language>
-									<AudioFile>gear-shift-5.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="524820622"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="gear-shift-5" ID="{4A4604E1-2FAF-4A3C-97AB-8C8C30AAE2C6}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 					</ChildrenList>
 					<BlendTrackList>
 						<BlendTrack Name="EngineRPM" ID="{E874A869-DC4E-4ECA-BA97-D418A7F21DA8}" ShortID="626210090">
@@ -395,119 +257,52 @@
 									<CrossfadingInfo>
 										<LeftEdgePos>0</LeftEdgePos>
 										<LeftFadingMode>Automatic</LeftFadingMode>
-										<RightEdgePos>17.3017972312064</RightEdgePos>
+										<RightEdgePos>5</RightEdgePos>
 										<RightFadingMode>Automatic</RightFadingMode>
-										<RightFadingSegmentShape>Exp2</RightFadingSegmentShape>
 									</CrossfadingInfo>
 								</BlendTrackAssoc>
 								<BlendTrackAssoc>
 									<ItemRef Name="1k-rpm-idle-loop" ID="{3F670CA5-0E0C-49E6-95F1-E806EA0A441C}"/>
 									<CrossfadingInfo>
-										<LeftEdgePos>11.4801189095281</LeftEdgePos>
+										<LeftEdgePos>5</LeftEdgePos>
 										<LeftFadingMode>Automatic</LeftFadingMode>
-										<LeftFadingSegmentShape>Log2</LeftFadingSegmentShape>
-										<RightEdgePos>32.3951048951049</RightEdgePos>
+										<RightEdgePos>25</RightEdgePos>
 										<RightFadingMode>Automatic</RightFadingMode>
-										<RightFadingSegmentShape>Log2</RightFadingSegmentShape>
 									</CrossfadingInfo>
 								</BlendTrackAssoc>
 								<BlendTrackAssoc>
 									<ItemRef Name="2k-rpm-idle-loop" ID="{0EE1B82C-5A60-46AA-9B29-4C2E57CB457C}"/>
 									<CrossfadingInfo>
-										<LeftEdgePos>22.9602378190562</LeftEdgePos>
+										<LeftEdgePos>25.0056923645107</LeftEdgePos>
 										<LeftFadingMode>Automatic</LeftFadingMode>
-										<LeftFadingSegmentShape>Log1</LeftFadingSegmentShape>
-										<RightEdgePos>47.4475524475524</RightEdgePos>
+										<RightEdgePos>40</RightEdgePos>
 										<RightFadingMode>Automatic</RightFadingMode>
-										<RightFadingSegmentShape>Log2</RightFadingSegmentShape>
 									</CrossfadingInfo>
 								</BlendTrackAssoc>
 								<BlendTrackAssoc>
 									<ItemRef Name="3k-rpm-idle-loop" ID="{38108931-B8A6-4844-9B9A-3EDD05D91E9B}"/>
 									<CrossfadingInfo>
-										<LeftEdgePos>37.8028951617135</LeftEdgePos>
+										<LeftEdgePos>40.0056923645107</LeftEdgePos>
 										<LeftFadingMode>Automatic</LeftFadingMode>
-										<LeftFadingSegmentShape>Log2</LeftFadingSegmentShape>
-										<RightEdgePos>63.5489510489511</RightEdgePos>
+										<RightEdgePos>55</RightEdgePos>
 										<RightFadingMode>Automatic</RightFadingMode>
-										<RightFadingSegmentShape>Exp2</RightFadingSegmentShape>
 									</CrossfadingInfo>
 								</BlendTrackAssoc>
 								<BlendTrackAssoc>
 									<ItemRef Name="4k-rpm-idle-loop" ID="{467F9643-7A3F-4B48-AA0B-8C7C6CE5C3E4}"/>
 									<CrossfadingInfo>
-										<LeftEdgePos>52.9545454545455</LeftEdgePos>
+										<LeftEdgePos>55</LeftEdgePos>
 										<LeftFadingMode>Automatic</LeftFadingMode>
-										<LeftFadingSegmentShape>Log2</LeftFadingSegmentShape>
-										<RightEdgePos>80.4677823426574</RightEdgePos>
+										<RightEdgePos>70</RightEdgePos>
 										<RightFadingMode>Automatic</RightFadingMode>
-										<RightFadingSegmentShape>Exp2</RightFadingSegmentShape>
 									</CrossfadingInfo>
 								</BlendTrackAssoc>
 								<BlendTrackAssoc>
 									<ItemRef Name="5k-rpm-idle-loop" ID="{5C3890EF-D097-4B6D-BBCF-E71E10EE2975}"/>
 									<CrossfadingInfo>
-										<LeftEdgePos>70.3978522727273</LeftEdgePos>
+										<LeftEdgePos>70</LeftEdgePos>
 										<LeftFadingMode>Automatic</LeftFadingMode>
-										<LeftFadingSegmentShape>Log2</LeftFadingSegmentShape>
 										<RightEdgePos>90</RightEdgePos>
-										<RightFadingMode>Automatic</RightFadingMode>
-									</CrossfadingInfo>
-								</BlendTrackAssoc>
-							</BlendTrackAssocList>
-						</BlendTrack>
-						<BlendTrack Name="TransmissionShift" ID="{413E070E-D21E-40A2-8AD4-154158631EAA}" ShortID="748841464">
-							<PropertyList>
-								<Property Name="EnableCrossFading" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="LayerCrossFadeControlInput">
-									<ObjectRef Name="PlayerSpeed" ID="{6D8A2DEB-1D37-4E0E-A9CA-0D986029453C}" WorkUnitID="{48779CF1-09FD-4278-8031-D5F86274207E}"/>
-								</Reference>
-							</ReferenceList>
-							<BlendTrackAssocList>
-								<BlendTrackAssoc>
-									<ItemRef Name="gear-shift-1" ID="{7D7FE47F-E3AE-445B-AB5D-31BF5E4D2E02}"/>
-									<CrossfadingInfo>
-										<LeftEdgePos>11.8006993006993</LeftEdgePos>
-										<LeftFadingMode>Automatic</LeftFadingMode>
-										<RightEdgePos>18.0313435314685</RightEdgePos>
-										<RightFadingMode>Automatic</RightFadingMode>
-									</CrossfadingInfo>
-								</BlendTrackAssoc>
-								<BlendTrackAssoc>
-									<ItemRef Name="gear-shift-2" ID="{F56D99F1-DC0F-4C1B-985D-1ED7176476A2}"/>
-									<CrossfadingInfo>
-										<LeftEdgePos>22.6891861888112</LeftEdgePos>
-										<LeftFadingMode>Automatic</LeftFadingMode>
-										<RightEdgePos>31.2486267482517</RightEdgePos>
-										<RightFadingMode>Automatic</RightFadingMode>
-									</CrossfadingInfo>
-								</BlendTrackAssoc>
-								<BlendTrackAssoc>
-									<ItemRef Name="gear-shift-3" ID="{0DB7CB36-DE96-4D27-820F-9E341C1F0BC0}"/>
-									<CrossfadingInfo>
-										<LeftEdgePos>36.7243387237762</LeftEdgePos>
-										<LeftFadingMode>Automatic</LeftFadingMode>
-										<RightEdgePos>46.3848028846154</RightEdgePos>
-										<RightFadingMode>Automatic</RightFadingMode>
-									</CrossfadingInfo>
-								</BlendTrackAssoc>
-								<BlendTrackAssoc>
-									<ItemRef Name="gear-shift-4" ID="{30AA8A9D-D6D7-4861-933D-94DC6677EFDC}"/>
-									<CrossfadingInfo>
-										<LeftEdgePos>53.6859709353147</LeftEdgePos>
-										<LeftFadingMode>Automatic</LeftFadingMode>
-										<RightEdgePos>62.6855334353147</RightEdgePos>
-										<RightFadingMode>Automatic</RightFadingMode>
-									</CrossfadingInfo>
-								</BlendTrackAssoc>
-								<BlendTrackAssoc>
-									<ItemRef Name="gear-shift-5" ID="{EFD6A835-DB5B-469C-B98E-48F86EC031EF}"/>
-									<CrossfadingInfo>
-										<LeftEdgePos>70.8677109921329</LeftEdgePos>
-										<LeftFadingMode>Automatic</LeftFadingMode>
-										<RightEdgePos>80.8432354676574</RightEdgePos>
 										<RightFadingMode>Automatic</RightFadingMode>
 									</CrossfadingInfo>
 								</BlendTrackAssoc>
@@ -562,171 +357,12 @@
 									<Language>SFX</Language>
 									<AudioFile>click-clack-loop.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="765596562"/>
+										<MediaID ID="473609348"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="sfx_turn-signal-loop" ID="{798E0F45-6B0F-4ADD-8452-4F319250AF57}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-				</Folder>
-				<Folder Name="UI-click" ID="{1EFFA9F9-FAF6-4AC4-A547-C66A1FE81DF6}" ShortID="616572620">
-					<ChildrenList>
-						<Sound Name="knock" ID="{170A6980-1C19-4A05-98EC-658F677326D8}" ShortID="968237005">
-							<PropertyList>
-								<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
-								<Property Name="LoudnessNormalizationType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="knock" ID="{8485B4DD-59CF-4AD4-873E-B440ADAF1788}">
-									<Language>SFX</Language>
-									<AudioFile>knock.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="845289816"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="knock" ID="{8485B4DD-59CF-4AD4-873E-B440ADAF1788}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-				</Folder>
-				<RandomSequenceContainer Name="UI-Alert" ID="{436486A5-9D1B-4A7C-9A46-E29205337587}" ShortID="763388139">
-					<PropertyList>
-						<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<Sound Name="game1-ui" ID="{07ED3CB9-1A37-48C8-8C91-203BCBD91346}" ShortID="786855946">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="game1-ui" ID="{59B7A2B2-75D4-44A5-A985-BD7BA14767B3}">
-									<Language>SFX</Language>
-									<AudioFile>game1-ui.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="1015857121"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="game1-ui" ID="{59B7A2B2-75D4-44A5-A985-BD7BA14767B3}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="game2-ui" ID="{AE38A3C5-479B-4959-B060-A3CEFF4A2B7E}" ShortID="121927514">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="game2-ui" ID="{D4073115-3044-443A-9B0A-8FE9D45F1218}">
-									<Language>SFX</Language>
-									<AudioFile>game2-ui.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="109046689"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="game2-ui" ID="{D4073115-3044-443A-9B0A-8FE9D45F1218}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="game3-ui" ID="{DE8057CA-74FF-48EC-BEA7-6A293E3E5B2E}" ShortID="979838844">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="game3-ui" ID="{1F7A5FBD-86D2-406D-9B3A-0CBDA2EF1A11}">
-									<Language>SFX</Language>
-									<AudioFile>game3-ui.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="414089109"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="game3-ui" ID="{1F7A5FBD-86D2-406D-9B3A-0CBDA2EF1A11}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="game4-ui" ID="{120032AE-76D1-49A5-BEFF-BC60471BF600}" ShortID="662819172">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="game4-ui" ID="{CA35BCDE-AEDA-40D9-827D-A6C79555C6C5}">
-									<Language>SFX</Language>
-									<AudioFile>game4-ui.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="71944599"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="game4-ui" ID="{CA35BCDE-AEDA-40D9-827D-A6C79555C6C5}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-				</RandomSequenceContainer>
-				<Folder Name="RadioButton" ID="{A19BCF97-96AA-455F-8B7E-260269785D73}" ShortID="1068637340">
-					<ChildrenList>
-						<Sound Name="radio-button" ID="{631F175C-D5E5-4681-B766-41583626D73E}" ShortID="768196332">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="radio-button" ID="{6C3FF1A4-EB07-43D5-8F4A-C031FA5DF536}">
-									<Language>SFX</Language>
-									<AudioFile>radio-button.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="496411243"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="radio-button" ID="{6C3FF1A4-EB07-43D5-8F4A-C031FA5DF536}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

@@ -10,27 +10,11 @@
     "Type": "User",
     "GUID": "{87C647B2-049B-4386-8797-583017334CB7}",
     "Language": "SFX",
-    "Hash": "{87803914-65AF-0808-46E3-588744A080BE}",
+    "Hash": "{00E20A1F-008E-6C05-1C1D-4BDCDCBDEF26}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
     "Media": [
-     {
-      "Id": "54888788",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "gear-shift-2.wav",
-      "CachePath": "74/{7459E784-843F-8B41-3AAF-BB2450794688}.wem"
-     },
-     {
-      "Id": "152114452",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "gear-shift-3.wav",
-      "CachePath": "E5/{E53E0CAE-547D-B0C6-3CBE-BC72C64BECE2}.wem"
-     },
      {
       "Id": "207371283",
       "Language": "SFX",
@@ -77,15 +61,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "click-clack-loop.wav",
-      "CachePath": "79/{798B9755-CEEE-05E6-0918-A92BD8C29401}.wem"
-     },
-     {
-      "Id": "524820622",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "gear-shift-5.wav",
-      "CachePath": "08/{08032865-2CF7-B254-431A-056A1A1BF1B3}.wem"
+      "CachePath": "F4/{F48A763C-42E1-E971-6429-5B2ADCA47703}.wem"
      },
      {
       "Id": "535750132",
@@ -96,36 +72,12 @@
       "CachePath": "77/{779081D7-4713-A000-5263-E053AE4B5EC0}.wem"
      },
      {
-      "Id": "605112290",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "gear-shift-4.wav",
-      "CachePath": "83/{83DCCEDF-374A-ED68-7780-E79A7522BA8B}.wem"
-     },
-     {
       "Id": "688959639",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "ambience-loop.wav",
       "CachePath": "16/{164D85BB-46DE-5530-6229-AC4774293E8C}.wem"
-     },
-     {
-      "Id": "765596562",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "click-clack-loop.wav",
-      "CachePath": "E0/{E01E50E9-3686-7653-D7FC-F50EBBD9FA0F}.wem"
-     },
-     {
-      "Id": "894716371",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "gear-shift-1.wav",
-      "CachePath": "08/{08032865-2CF7-B254-431A-056A1A1BF1B3}.wem"
      },
      {
       "Id": "984636645",
@@ -145,12 +97,6 @@
       "DurationType": "Infinite",
       "MediaRefs": [
        {
-        "Id": "54888788"
-       },
-       {
-        "Id": "152114452"
-       },
-       {
         "Id": "207371283"
        },
        {
@@ -163,16 +109,7 @@
         "Id": "427793532"
        },
        {
-        "Id": "524820622"
-       },
-       {
         "Id": "535750132"
-       },
-       {
-        "Id": "605112290"
-       },
-       {
-        "Id": "894716371"
        },
        {
         "Id": "984636645"
@@ -205,9 +142,6 @@
       "MediaRefs": [
        {
         "Id": "473609348"
-       },
-       {
-        "Id": "765596562"
        }
       ]
      }
@@ -222,6 +156,6 @@
     ]
    }
   ],
-  "FileHash": "{BFD45B1B-E42E-4C8B-ED98-D0795FDF63C4}"
+  "FileHash": "{816CB560-1665-A1A0-E392-0A7CFCB41F17}"
  }
 }

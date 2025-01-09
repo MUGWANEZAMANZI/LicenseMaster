@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{AEC57EF9-248F-41ED-A6F8-DD78D87B9216}" SchemaVersion="123">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{AEC57EF9-248F-41ED-A6F8-DD78D87B9216}" PersistMode="Standalone">
-			<ChildrenList>
-				<StateGroup Name="RadioOn" ID="{EEC0C33F-019B-42EF-8BF8-AD06DE3CB22B}">
-					<ChildrenList>
-						<State Name="None" ID="{CB2B3911-B58F-44B8-A23D-DC1268F1C611}"/>
-					</ChildrenList>
-				</StateGroup>
-				<StateGroup Name="RadioOff" ID="{D9867B6E-E166-4ACE-9014-6505D20ED679}">
-					<ChildrenList>
-						<State Name="None" ID="{74F05BD3-34E0-418E-A2AA-A09B040209FB}"/>
-					</ChildrenList>
-				</StateGroup>
-			</ChildrenList>
-		</WorkUnit>
+		<WorkUnit Name="Default Work Unit" ID="{AEC57EF9-248F-41ED-A6F8-DD78D87B9216}" PersistMode="Standalone"/>
 	</States>
 </WwiseDocument>

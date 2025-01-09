@@ -3,7 +3,7 @@
   "Platform": {
    "Name": "Web",
    "BasePlatform": "Web",
-   "Generator": "2024.1.1.8691"
+   "Generator": "2024.1.0.8669"
   },
   "RootPaths": {
    "ProjectRoot": "../..",
@@ -30,9 +30,8 @@
    "MaxAttenuationInfo": "true",
    "EstimatedDurationInfo": "true",
    "PrintObjectGuid": "true",
-   "PrintObjectPath": "true",
-   "PrintObjectColor": "true"
+   "PrintObjectPath": "true"
   },
-  "FileHash": "{C99D9EC9-0E38-4E27-8B21-15FBC89790EB}"
+  "FileHash": "{E038E638-4372-F287-FD30-6C7848761269}"
  }
 }

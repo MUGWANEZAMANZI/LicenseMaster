@@ -18,30 +18,6 @@ namespace AK
         static const AkUniqueID TURNSIGNAL = 3858101368U;
     } // namespace EVENTS
 
-    namespace STATES
-    {
-        namespace RADIOOFF
-        {
-            static const AkUniqueID GROUP = 4221175997U;
-
-            namespace STATE
-            {
-                static const AkUniqueID NONE = 748895195U;
-            } // namespace STATE
-        } // namespace RADIOOFF
-
-        namespace RADIOON
-        {
-            static const AkUniqueID GROUP = 4245784721U;
-
-            namespace STATE
-            {
-                static const AkUniqueID NONE = 748895195U;
-            } // namespace STATE
-        } // namespace RADIOON
-
-    } // namespace STATES
-
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID PLAYERSPEED = 1493153371U;

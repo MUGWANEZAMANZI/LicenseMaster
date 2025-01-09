@@ -3,7 +3,7 @@
   "Platform": {
    "Name": "Mac",
    "BasePlatform": "Mac",
-   "Generator": "2024.1.1.8691"
+   "Generator": "2024.1.0.8669"
   },
   "RootPaths": {
    "ProjectRoot": "../..",
@@ -30,9 +30,8 @@
    "MaxAttenuationInfo": "true",
    "EstimatedDurationInfo": "true",
    "PrintObjectGuid": "true",
-   "PrintObjectPath": "true",
-   "PrintObjectColor": "true"
+   "PrintObjectPath": "true"
   },
-  "FileHash": "{58069556-2475-3D98-29F6-86A5B4B08D8F}"
+  "FileHash": "{822430B0-EC61-A436-4A9C-6B959474EA1F}"
  }
 }
