@@ -1,19 +1,32 @@
 Event	ID	Name			Wwise Object Path	Notes
+	293751399	TriggerAlert			\Default Work Unit\TriggerAlert	
 	2231332761	CarEngineStart			\Default Work Unit\CarEngineStart	
 	3372421815	LevelStart			\Default Work Unit\LevelStart	
+	3711598968	MenuClick			\Default Work Unit\MenuClick	
 	3858101368	TurnSignal			\Default Work Unit\TurnSignal	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1493153371	PlayerSpeed			\Default Work Unit\PlayerSpeed	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	207371283	4k-rpm-idle-loop	C:\Users\genna\Workspace\Pulse\Pulse_WwiseProject\.cache\41\{4196EB86-B40C-2953-440C-3BAE0C6EBE14}.wem		\Actor-Mixer Hierarchy\Default Work Unit\CarEngine\4k-rpm-idle-loop		624160
-	226987477	2k-rpm-idle-loop	C:\Users\genna\Workspace\Pulse\Pulse_WwiseProject\.cache\55\{5501CFDF-7CE5-2526-18E6-BF458F485DE2}.wem		\Actor-Mixer Hierarchy\Default Work Unit\CarEngine\2k-rpm-idle-loop		864160
-	377713728	ambience-loop_2	C:\Users\genna\Workspace\Pulse\Pulse_WwiseProject\.cache\65\{65F2B4BE-C115-2B65-0197-3E27625FE8F3}.wem		\Actor-Mixer Hierarchy\Default Work Unit\RoadAmbience\ambience-loop_2		37376160
-	423541099	3k-rpm-idle-loop	C:\Users\genna\Workspace\Pulse\Pulse_WwiseProject\.cache\61\{6110DD24-9149-F135-B7D2-E9A9CC7ABB1C}.wem		\Actor-Mixer Hierarchy\Default Work Unit\CarEngine\3k-rpm-idle-loop		768160
-	427793532	0k-rpm-idle-loop	C:\Users\genna\Workspace\Pulse\Pulse_WwiseProject\.cache\E9\{E941D5DF-BD0B-C384-127F-586030B40BB8}.wem		\Actor-Mixer Hierarchy\Default Work Unit\CarEngine\0k-rpm-idle-loop		1056160
-	473609348	TurnSignalOff	C:\Users\genna\Workspace\Pulse\Pulse_WwiseProject\.cache\F4\{F48A763C-42E1-E971-6429-5B2ADCA47703}.wem		\Actor-Mixer Hierarchy\Default Work Unit\TurnSignal\TurnSignalOff		62600
-	535750132	1k-rpm-idle-loop	C:\Users\genna\Workspace\Pulse\Pulse_WwiseProject\.cache\77\{779081D7-4713-A000-5263-E053AE4B5EC0}.wem		\Actor-Mixer Hierarchy\Default Work Unit\CarEngine\1k-rpm-idle-loop		960160
-	688959639	ambience-loop_1	C:\Users\genna\Workspace\Pulse\Pulse_WwiseProject\.cache\16\{164D85BB-46DE-5530-6229-AC4774293E8C}.wem		\Actor-Mixer Hierarchy\Default Work Unit\RoadAmbience\ambience-loop_1		13609252
-	984636645	5k-rpm-idle-loop	C:\Users\genna\Workspace\Pulse\Pulse_WwiseProject\.cache\EA\{EAD71E54-56B6-469F-C251-0D23170C7AD7}.wem		\Actor-Mixer Hierarchy\Default Work Unit\CarEngine\5k-rpm-idle-loop		432160
+	54888788	gear-shift-2	Y:\Pulse\Pulse_WwiseProject\.cache\C6\{C6DC705A-56B7-DD08-CE24-0C63C41E2C0C}.wem		\Actor-Mixer Hierarchy\Default Work Unit\CarEngine\gear-shift-2		14745
+	71944599	game4-ui	Y:\Pulse\Pulse_WwiseProject\.cache\4B\{4B51D32E-B41F-0A2C-E6F5-B581E476984A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI-Alert\game4-ui		10532
+	109046689	game2-ui	Y:\Pulse\Pulse_WwiseProject\.cache\A1\{A1FBA647-52BF-8960-0154-F34EBE126EBB}.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI-Alert\game2-ui		11608
+	152114452	gear-shift-3	Y:\Pulse\Pulse_WwiseProject\.cache\2F\{2FD81D77-AAFE-B635-4E32-3B33981A1209}.wem		\Actor-Mixer Hierarchy\Default Work Unit\CarEngine\gear-shift-3		10575
+	207371283	4k-rpm-idle-loop	Y:\Pulse\Pulse_WwiseProject\.cache\26\{26F3CB1C-2B22-879F-5078-10C6E9811A5C}.wem		\Actor-Mixer Hierarchy\Default Work Unit\CarEngine\4k-rpm-idle-loop		36773
+	226987477	2k-rpm-idle-loop	Y:\Pulse\Pulse_WwiseProject\.cache\3A\{3A4DD53C-CC05-8E6E-06D6-7F93A68C7665}.wem		\Actor-Mixer Hierarchy\Default Work Unit\CarEngine\2k-rpm-idle-loop		47010
+	377713728	ambience-loop_2	Y:\Pulse\Pulse_WwiseProject\.cache\34\{340554EF-1336-7E33-4CE7-4A264E66899C}.wem		\Actor-Mixer Hierarchy\Default Work Unit\RoadAmbience\ambience-loop_2		2622627
+	414089109	game3-ui	Y:\Pulse\Pulse_WwiseProject\.cache\35\{35EC7C95-5BB8-8849-F450-DFA96E452E50}.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI-Alert\game3-ui		11585
+	423541099	3k-rpm-idle-loop	Y:\Pulse\Pulse_WwiseProject\.cache\92\{92B36128-24D8-FCEC-0942-6C0B1BCA5EF4}.wem		\Actor-Mixer Hierarchy\Default Work Unit\CarEngine\3k-rpm-idle-loop		42075
+	427793532	0k-rpm-idle-loop	Y:\Pulse\Pulse_WwiseProject\.cache\0D\{0D44EF50-57BF-2920-2A01-2070285592AB}.wem		\Actor-Mixer Hierarchy\Default Work Unit\CarEngine\0k-rpm-idle-loop		92580
+	473609348	TurnSignalOn	Y:\Pulse\Pulse_WwiseProject\.cache\96\{96DE1C02-D20C-8629-4AA1-B99B98A05AC3}.wem		\Actor-Mixer Hierarchy\Default Work Unit\TurnSignal\TurnSignalOn		1953
+	524820622	gear-shift-5	Y:\Pulse\Pulse_WwiseProject\.cache\9A\{9A4E292E-BCB6-120D-5F7B-56BC9196411E}.wem		\Actor-Mixer Hierarchy\Default Work Unit\CarEngine\gear-shift-5		8842
+	535750132	1k-rpm-idle-loop	Y:\Pulse\Pulse_WwiseProject\.cache\DE\{DEE129DB-47A3-457B-BEFC-35AD521F9EE2}.wem		\Actor-Mixer Hierarchy\Default Work Unit\CarEngine\1k-rpm-idle-loop		51897
+	605112290	gear-shift-4	Y:\Pulse\Pulse_WwiseProject\.cache\0D\{0D0AF4A4-2CFD-3AE0-66A5-BABF853EBCE6}.wem		\Actor-Mixer Hierarchy\Default Work Unit\CarEngine\gear-shift-4		7700
+	688959639	ambience-loop_1	Y:\Pulse\Pulse_WwiseProject\.cache\58\{5801BEB7-958A-9A09-B13A-4E24A23E2211}.wem		\Actor-Mixer Hierarchy\Default Work Unit\RoadAmbience\ambience-loop_1		974685
+	765596562	TurnSignalOff	Y:\Pulse\Pulse_WwiseProject\.cache\12\{12C8C6C0-F294-D7CA-47C2-AD468DAC11D3}.wem		\Actor-Mixer Hierarchy\Default Work Unit\TurnSignal\TurnSignalOff		2577
+	845289816	knock	Y:\Pulse\Pulse_WwiseProject\.cache\95\{956FD8D0-5DB6-62F9-4A9D-AF83E9DC85D7}.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI-click\knock		3918
+	894716371	gear-shift-1	Y:\Pulse\Pulse_WwiseProject\.cache\9A\{9A4E292E-BCB6-120D-5F7B-56BC9196411E}.wem		\Actor-Mixer Hierarchy\Default Work Unit\CarEngine\gear-shift-1		8842
+	984636645	5k-rpm-idle-loop	Y:\Pulse\Pulse_WwiseProject\.cache\4B\{4BD9458D-B446-8D77-DA86-E433C0C1F6E1}.wem		\Actor-Mixer Hierarchy\Default Work Unit\CarEngine\5k-rpm-idle-loop		25429
+	1015857121	game1-ui	Y:\Pulse\Pulse_WwiseProject\.cache\39\{390449EC-C67E-9DF5-57C3-76F71EE7F62B}.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI-Alert\game1-ui		10705
 

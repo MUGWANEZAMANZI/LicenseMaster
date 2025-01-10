@@ -1,0 +1,15 @@
+Event	ID	Name			Wwise Object Path	Notes
+	622084806	RadioStart			\Default Work Unit\RadioStart	
+	1232312710	RadioStop			\Default Work Unit\RadioStop	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	90260942	radio-transition-3	Y:\Pulse\Pulse_WwiseProject\.cache\9E\{9EAF6487-BCB2-D5D7-9743-9B916876DF6B}.wem		\Interactive Music Hierarchy\Default Work Unit\CarRadio\radio-transition-3\radio-transition-3		28953
+	136653972	radio-transition-2	Y:\Pulse\Pulse_WwiseProject\.cache\53\{53181150-2550-2067-57F1-B55003D38E59}.wem		\Interactive Music Hierarchy\Default Work Unit\CarRadio\radio-transition-2\radio-transition-2		29437
+	352669365	spoken-radio-2	Y:\Pulse\Pulse_WwiseProject\.cache\1C\{1C1E260D-E3A0-2B16-C8A2-60E12D33DA78}.wem		\Interactive Music Hierarchy\Default Work Unit\CarRadio\spoken-radio-2\spoken-radio-2		122682
+	390810602	song-1	Y:\Pulse\Pulse_WwiseProject\.cache\DD\{DD94EFD8-4F5C-AEE0-6CE0-DF3594D2B7B8}.wem		\Interactive Music Hierarchy\Default Work Unit\CarRadio\song-1\song-1		1662470
+	482783792	song-3	Y:\Pulse\Pulse_WwiseProject\.cache\C9\{C9C02BB9-C62F-B778-79E0-57F68E5F91DA}.wem		\Interactive Music Hierarchy\Default Work Unit\CarRadio\song-3\song-3		1560228
+	496411243	radio-button	Y:\Pulse\Pulse_WwiseProject\.cache\1E\{1ED555DA-8295-59FE-1C0C-77E997875152}.wem		\Actor-Mixer Hierarchy\Default Work Unit\RadioButton\radio-button		4619
+	543553222	song-2	Y:\Pulse\Pulse_WwiseProject\.cache\88\{885E626A-EB79-BD91-2B20-435405F3ECA6}.wem		\Interactive Music Hierarchy\Default Work Unit\CarRadio\song-2\song-2		1436882
+	838989914	radio-transition-1	Y:\Pulse\Pulse_WwiseProject\.cache\95\{952998D8-B69B-4CFF-F1F2-558780D3D0EA}.wem		\Interactive Music Hierarchy\Default Work Unit\CarRadio\radio-transition-1\radio-transition-1		40662
+	1054198308	spoken-radio-1	Y:\Pulse\Pulse_WwiseProject\.cache\47\{471E8483-3DB5-B777-06C5-C3DF08D194AA}.wem		\Interactive Music Hierarchy\Default Work Unit\CarRadio\spoken-radio-1\spoken-radio-1		207617
+

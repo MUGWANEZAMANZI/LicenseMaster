@@ -15,8 +15,36 @@ namespace AK
     {
         static const AkUniqueID CARENGINESTART = 2231332761U;
         static const AkUniqueID LEVELSTART = 3372421815U;
+        static const AkUniqueID MENUCLICK = 3711598968U;
+        static const AkUniqueID RADIOSTART = 622084806U;
+        static const AkUniqueID RADIOSTOP = 1232312710U;
+        static const AkUniqueID TRIGGERALERT = 293751399U;
         static const AkUniqueID TURNSIGNAL = 3858101368U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace RADIOOFF
+        {
+            static const AkUniqueID GROUP = 4221175997U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace RADIOOFF
+
+        namespace RADIOON
+        {
+            static const AkUniqueID GROUP = 4245784721U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace RADIOON
+
+    } // namespace STATES
 
     namespace GAME_PARAMETERS
     {

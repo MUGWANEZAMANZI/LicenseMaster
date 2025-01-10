@@ -81,6 +81,7 @@ crashlytics-build.properties
 *.validationcache
 *.wsettings
 Assets/Wwise/**/*.asset
+Pulse_WwiseProject/Originals/SFX/*.wav
 # build stuff (unsure?)
 # Assets/Wwise/Deployment/Plugins/Windows/**/*.meta
 
