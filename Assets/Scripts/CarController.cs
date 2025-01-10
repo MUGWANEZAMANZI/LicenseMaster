@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Profiling;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CarController : MonoBehaviour
 {
@@ -29,8 +31,9 @@ public class CarController : MonoBehaviour
   [SerializeField] public bool rightBlinkerOn;
   [SerializeField] public bool offRoad;
   [SerializeField] public bool wrongWay = false;
-
   [SerializeField] public List<string> wheelsOffRoad = new List<string>();
+
+
 
   [Header("References")]
   [SerializeField] public Vector3 bodyMassCenter;
@@ -51,8 +54,8 @@ public class CarController : MonoBehaviour
   public WheelCollider rearRightCollider;
 
   [Header("Wwise")]
-  public AK.Wwise.Event CarEngineStart; 
-  public AK.Wwise.Event TurnSignal; 
+  public AK.Wwise.Event CarEngineStart;
+  public AK.Wwise.Event TurnSignal;
   public AK.Wwise.RTPC PlayerSpeed;
 
   [HideInInspector]
@@ -62,6 +65,7 @@ public class CarController : MonoBehaviour
   [HideInInspector]
   public bool isTractionLocked;
 
+  private PlayerControls controls;
   private Rigidbody rb;
   public static float steeringAxis; // Represents the steering wheel. Values from -1 to 1.
   private float throttleAxis; // Used to know whether the throttle has reached the maximum value. It goes from -1 to 1.
@@ -82,8 +86,10 @@ public class CarController : MonoBehaviour
   WheelFrictionCurve RRwheelFriction;
   float RRWextremumSlip;
 
+
   void Awake()
   {
+    controls = PlayerControls.instance;
     cam.cullingMask = 31;
   }
   void Start()
@@ -102,8 +108,8 @@ public class CarController : MonoBehaviour
     localVelocityZ = transform.InverseTransformDirection(rb.velocity).z;
 
     if (wheelsOffRoad.Count > 1)
-    { 
-      offRoad = true; 
+    {
+      offRoad = true;
     }
     else
     {
@@ -111,7 +117,7 @@ public class CarController : MonoBehaviour
     }
 
     // Accelerate
-    if (Input.GetKey(KeyCode.W) && (!Input.GetKeyDown(KeyCode.Space) || !Input.GetKeyDown(KeyCode.S)))
+    if (controls.ThrottleInput && (!controls.HandbrakeInput || !controls.ReverseInput))
     {
       CancelInvoke("DecelerateCar");
       deceleratingCar = false;
@@ -119,55 +125,58 @@ public class CarController : MonoBehaviour
     }
 
     // Reverse/Brake
-    if (Input.GetKey(KeyCode.S))
+    if (controls.ReverseInput)
     {
       CancelInvoke("DecelerateCar");
       deceleratingCar = false;
       GoReverse();
     }
 
-    // Left
-    if (Input.GetKey(KeyCode.A)) TurnLeft();
+    if (controls.TurnLeftInput) TurnLeft();
+    if (controls.TurnRightInput) TurnRight();
 
-    // Right
-    if (Input.GetKey(KeyCode.D)) TurnRight();
-
-    //Right Blinker
-    if (Input.GetKeyUp(KeyCode.E))
+    if (controls.RightBlinkerInput)
     {
       rightBlinkerOn = !rightBlinkerOn;
       leftBlinkerOn = false;
     }
 
-    // Left BLinker
-    if (Input.GetKeyUp(KeyCode.Q))
+    if (controls.LeftBlinkerInput)
     {
       leftBlinkerOn = !leftBlinkerOn;
       rightBlinkerOn = false;
     }
 
-    if (Input.GetKeyDown(KeyCode.Space))
+    if (controls.HandbrakeInput)
     {
       Brakes();
     }
 
     // Coast
-    if ((!Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W))) ThrottleOff();
+    if (!controls.ReverseInput && !controls.ThrottleInput) ThrottleOff();
 
-    if ((!Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W)) && !Input.GetKey(KeyCode.Space) && !deceleratingCar)
+    if (!controls.ReverseInput && !controls.ThrottleInput && !controls.HandbrakeInput && !deceleratingCar)
     {
       InvokeRepeating("DecelerateCar", 0f, 0.1f);
       deceleratingCar = true;
     }
 
-    if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && steeringAxis != 0f) ResetSteeringAngle();
+    if (!controls.TurnLeftInput && !controls.TurnRightInput && steeringAxis != 0f) ResetSteeringAngle();
 
     // Brake Lights
-    if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.Space)) BrakeLight.GetComponent<MeshRenderer>().material = blinkerOn;
-    if (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.Space)) BrakeLight.GetComponent<MeshRenderer>().material = blinkerOff;
+    if (controls.ReverseInput || controls.HandbrakeInput)
+    {
+      BrakeLight.GetComponent<MeshRenderer>().material = blinkerOn;
+    }
+    else
+    {
+      BrakeLight.GetComponent<MeshRenderer>().material = blinkerOff;
+    }
 
     // Turn and rotate wheels
     AnimateWheelMeshes();
+
+    // Flash blinkers
     if (leftBlinkerOn && !leftBlinkerCoroutine) StartCoroutine(LeftBlinkerFlash());
     if (rightBlinkerOn && !rightBlinkerCoroutine) StartCoroutine(RightBlinkerFlash());
   }
