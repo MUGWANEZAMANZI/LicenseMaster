@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using AK.Wwise;
 using UnityEngine;
 
 public enum Violations 
@@ -32,6 +33,7 @@ public class LevelManager : MonoBehaviour
 
     [Header("Wwise")]
     [SerializeField] public AK.Wwise.Event LevelStart;
+    [SerializeField] public AK.Wwise.Event TriggerAlert;
 
     public static LevelManager instance;
     private static int speedLimitDeduction = 5;
@@ -83,6 +85,7 @@ public class LevelManager : MonoBehaviour
         if (player.wrongWay)
         {
             points -= oneWayDeduction;
+            TriggerAlert.Post(gameObject);
             incuredViolations.Add(Violations.OneWay);
         }
         oneWayViolationCoroutine = false;
@@ -97,7 +100,8 @@ public class LevelManager : MonoBehaviour
         yield return new WaitForSeconds(violationWarningTime);
         if (player.offRoad)
         {
-            points -= speedLimitDeduction;
+            points -= offRoadDeduction;
+            TriggerAlert.Post(gameObject);
             incuredViolations.Add(Violations.OffRoad);
         }
         offRoadViolationCoroutine = false;
@@ -113,6 +117,7 @@ public class LevelManager : MonoBehaviour
         if (CarController.speed > currentZoneSpeedLimit)
         {
             points -= speedLimitDeduction;
+            TriggerAlert.Post(gameObject);
             incuredViolations.Add(Violations.Speed);
         }
         speedLimitViolationCoroutine = false;
@@ -144,6 +149,7 @@ public class LevelManager : MonoBehaviour
         if (stopViolationCoroutine) return;
         StartCoroutine(StopViolationDebounce());
         points -= stopZoneDeduction;
+        TriggerAlert.Post(gameObject);
         incuredViolations.Add(Violations.Stop);
     }
 
@@ -152,6 +158,7 @@ public class LevelManager : MonoBehaviour
         if (collisionViolationCoroutine) return;
         StartCoroutine(CollisionViolationDebounce());
         points -= collisionDeduction;
+        TriggerAlert.Post(gameObject);
         incuredViolations.Add(Violations.Collision);
     }
 }   

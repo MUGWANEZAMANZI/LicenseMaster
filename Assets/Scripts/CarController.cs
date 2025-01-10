@@ -57,6 +57,8 @@ public class CarController : MonoBehaviour
   public AK.Wwise.Event CarEngineStart;
   public AK.Wwise.Event TurnSignal;
   public AK.Wwise.RTPC PlayerSpeed;
+  public AK.Wwise.Event RadioStart;
+  public AK.Wwise.Event RadioStop;
 
   [HideInInspector]
   public static float speed;
@@ -73,9 +75,9 @@ public class CarController : MonoBehaviour
   public static float localVelocityZ;
   public static float localVelocityX;
   private bool deceleratingCar;
-  private bool touchControlsSetup = false;
   private bool leftBlinkerCoroutine = false;
   private bool rightBlinkerCoroutine = false;
+  private bool radioOn = false;
 
   WheelFrictionCurve FLwheelFriction;
   float FLWextremumSlip;
@@ -106,6 +108,18 @@ public class CarController : MonoBehaviour
     PlayerSpeed.SetValue(gameObject, speed); // Set Wwise RTPC
     localVelocityX = transform.InverseTransformDirection(rb.velocity).x;
     localVelocityZ = transform.InverseTransformDirection(rb.velocity).z;
+
+    if (controls.RadioInput && radioOn)
+    {
+      radioOn = false;
+      RadioStop.Post(gameObject);
+    }
+
+    if (controls.RadioInput && !radioOn)
+    {
+      radioOn = true;
+      RadioStart.Post(gameObject);
+    }
 
     if (wheelsOffRoad.Count > 1)
     {

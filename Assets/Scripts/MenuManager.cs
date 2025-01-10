@@ -7,19 +7,26 @@ public class MenuManager : MonoBehaviour
 
     [Header("UI References")]
     [SerializeField] public GameObject pauseMenuUI;
+    [SerializeField] public GameObject settingsMenuUI;
     [SerializeField] public GameObject HudOverlayUI;
 
+    [Header("Wwise")]
+    [SerializeField] public AK.Wwise.Event MenuClick;
+
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
             if (gameIsPaused)
             {
                 Resume();
-            } else {
+            }
+            else
+            {
                 Pause();
             }
-        }  
+        }
     }
 
     public void Resume()
@@ -39,6 +46,13 @@ public class MenuManager : MonoBehaviour
         gameIsPaused = true;
     }
 
+
+    public void Settings()
+    {
+        settingsMenuUI.SetActive(!settingsMenuUI.activeSelf);
+        pauseMenuUI.SetActive(!pauseMenuUI.activeSelf);
+    }
+
     public void ReloadScene()
     {
         Resume();
@@ -49,5 +63,10 @@ public class MenuManager : MonoBehaviour
     {
         Debug.Log("Quitting Game");
         Application.Quit();
+    }
+
+    public void ButtonAudio()
+    {
+        MenuClick.Post(gameObject);
     }
 }
