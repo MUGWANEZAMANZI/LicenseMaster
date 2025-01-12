@@ -591,7 +591,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
+									<ObjectRef Name="GUI" ID="{7325A0F9-3D81-41DC-AD67-C1953B1F2055}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -609,109 +609,6 @@
 						</Sound>
 					</ChildrenList>
 				</Folder>
-				<RandomSequenceContainer Name="UI-Alert" ID="{436486A5-9D1B-4A7C-9A46-E29205337587}" ShortID="763388139">
-					<PropertyList>
-						<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<Sound Name="game1-ui" ID="{07ED3CB9-1A37-48C8-8C91-203BCBD91346}" ShortID="786855946">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="game1-ui" ID="{59B7A2B2-75D4-44A5-A985-BD7BA14767B3}">
-									<Language>SFX</Language>
-									<AudioFile>game1-ui.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="1015857121"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="game1-ui" ID="{59B7A2B2-75D4-44A5-A985-BD7BA14767B3}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="game2-ui" ID="{AE38A3C5-479B-4959-B060-A3CEFF4A2B7E}" ShortID="121927514">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="game2-ui" ID="{D4073115-3044-443A-9B0A-8FE9D45F1218}">
-									<Language>SFX</Language>
-									<AudioFile>game2-ui.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="109046689"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="game2-ui" ID="{D4073115-3044-443A-9B0A-8FE9D45F1218}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="game3-ui" ID="{DE8057CA-74FF-48EC-BEA7-6A293E3E5B2E}" ShortID="979838844">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="game3-ui" ID="{1F7A5FBD-86D2-406D-9B3A-0CBDA2EF1A11}">
-									<Language>SFX</Language>
-									<AudioFile>game3-ui.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="414089109"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="game3-ui" ID="{1F7A5FBD-86D2-406D-9B3A-0CBDA2EF1A11}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="game4-ui" ID="{120032AE-76D1-49A5-BEFF-BC60471BF600}" ShortID="662819172">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="game4-ui" ID="{CA35BCDE-AEDA-40D9-827D-A6C79555C6C5}">
-									<Language>SFX</Language>
-									<AudioFile>game4-ui.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="71944599"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="game4-ui" ID="{CA35BCDE-AEDA-40D9-827D-A6C79555C6C5}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-				</RandomSequenceContainer>
 				<Folder Name="RadioButton" ID="{A19BCF97-96AA-455F-8B7E-260269785D73}" ShortID="1068637340">
 					<ChildrenList>
 						<Sound Name="radio-button" ID="{631F175C-D5E5-4681-B766-41583626D73E}" ShortID="768196332">
@@ -723,7 +620,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36DE3217-4056-41BB-9996-426F972FF4EE}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
+									<ObjectRef Name="World" ID="{1155E6B3-44D9-4481-AED8-265F46D8399A}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -737,6 +634,122 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="radio-button" ID="{6C3FF1A4-EB07-43D5-8F4A-C031FA5DF536}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="UI-alert" ID="{E521C6F4-11D1-409B-98CF-06B963910579}" ShortID="880565671">
+					<ChildrenList>
+						<Sound Name="alert-ui" ID="{57C396F7-F6A9-42DD-A715-1B0CAD65CFA8}" ShortID="557710025">
+							<PropertyList>
+								<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="GUI" ID="{7325A0F9-3D81-41DC-AD67-C1953B1F2055}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="alert-ui" ID="{58A58F73-E852-4C0B-9EBA-C35C22C33423}">
+									<Language>SFX</Language>
+									<AudioFile>alert-ui.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1067941581"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="alert-ui" ID="{58A58F73-E852-4C0B-9EBA-C35C22C33423}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="UI-Text" ID="{3E39F22E-FE06-4F82-81F9-34602A9C0889}" ShortID="1067568336">
+					<ChildrenList>
+						<Sound Name="text-ui" ID="{588242E2-A2C9-4B92-BC0C-F9BF2E8127FB}" ShortID="141808661">
+							<PropertyList>
+								<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="GUI" ID="{7325A0F9-3D81-41DC-AD67-C1953B1F2055}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="text-ui" ID="{9A2AE599-ADC9-44E5-8D5A-11E5CD4023C1}">
+									<Language>SFX</Language>
+									<AudioFile>text-ui.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1026813333"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="text-ui" ID="{9A2AE599-ADC9-44E5-8D5A-11E5CD4023C1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="UI-warning" ID="{F4238498-2C04-4501-9E7D-275F06223334}" ShortID="268394147">
+					<ChildrenList>
+						<Sound Name="warning-ui" ID="{1DC062DB-1FFE-4E45-A14B-02E95B58B8CF}" ShortID="556568176">
+							<PropertyList>
+								<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="GUI" ID="{7325A0F9-3D81-41DC-AD67-C1953B1F2055}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="warning-ui" ID="{CCCA15ED-BCFB-42B9-B6D3-EF3AAE23C38F}">
+									<Language>SFX</Language>
+									<AudioFile>warning-ui.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="116737263"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="warning-ui" ID="{CCCA15ED-BCFB-42B9-B6D3-EF3AAE23C38F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="UI-Win" ID="{0A5958B1-81A3-4BAA-A5A6-7C4D6545495D}" ShortID="362697838">
+					<ChildrenList>
+						<Sound Name="WIN-Sound" ID="{6747B7C7-5DFA-4EB9-9459-1EC480ACF9BF}" ShortID="675958045">
+							<PropertyList>
+								<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="GUI" ID="{7325A0F9-3D81-41DC-AD67-C1953B1F2055}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WIN Sound" ID="{84D449F8-E02B-46E6-AAB9-554C0F4F96E9}">
+									<Language>SFX</Language>
+									<AudioFile>WIN Sound.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="992596621"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WIN Sound" ID="{84D449F8-E02B-46E6-AAB9-554C0F4F96E9}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

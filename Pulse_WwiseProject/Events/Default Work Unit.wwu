@@ -80,7 +80,7 @@
 						<Action Name="" ID="{836AC85E-59D9-489A-8E88-2A5609ACEACE}" ShortID="905936257">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="UI-Alert" ID="{436486A5-9D1B-4A7C-9A46-E29205337587}" WorkUnitID="{A8681C96-2D69-4F34-8A7D-7701408A897A}"/>
+									<ObjectRef Name="alert-ui" ID="{57C396F7-F6A9-42DD-A715-1B0CAD65CFA8}" WorkUnitID="{A8681C96-2D69-4F34-8A7D-7701408A897A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -102,6 +102,39 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="CarRadio" ID="{95075E11-69FC-4CE7-B474-DC130FC3B318}" WorkUnitID="{366AE488-9C3F-4F26-98BC-E954D189A8AA}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MenuText" ID="{C4311994-3DF8-4D4F-8ED1-291CA38362B0}">
+					<ChildrenList>
+						<Action Name="" ID="{A37CE21C-14B7-4FA4-8163-63FD1435D8C2}" ShortID="1004882672">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="text-ui" ID="{588242E2-A2C9-4B92-BC0C-F9BF2E8127FB}" WorkUnitID="{A8681C96-2D69-4F34-8A7D-7701408A897A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="TriggerWarning" ID="{F9FA5EBB-01DA-453F-A09D-CD6194EE8798}">
+					<ChildrenList>
+						<Action Name="" ID="{FED8F3F1-8D7B-433F-9EA3-959C45E538AB}" ShortID="981243363">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="warning-ui" ID="{1DC062DB-1FFE-4E45-A14B-02E95B58B8CF}" WorkUnitID="{A8681C96-2D69-4F34-8A7D-7701408A897A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="LevelWin" ID="{6C2BF8A0-F09D-48AD-9DEE-8A42DF14F5D3}">
+					<ChildrenList>
+						<Action Name="" ID="{475BAC05-27BE-4E17-A819-7B5027462103}" ShortID="649270090">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WIN-Sound" ID="{6747B7C7-5DFA-4EB9-9459-1EC480ACF9BF}" WorkUnitID="{A8681C96-2D69-4F34-8A7D-7701408A897A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
