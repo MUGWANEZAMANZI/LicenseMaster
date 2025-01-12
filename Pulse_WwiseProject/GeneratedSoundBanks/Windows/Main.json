@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{87C647B2-049B-4386-8797-583017334CB7}",
     "Language": "SFX",
-    "Hash": "{3811719E-EE60-D2A5-53E8-0998F8246120}",
+    "Hash": "{7313F227-EF6B-4441-C2BE-DD76E18BB590}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -21,7 +21,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "gear-shift-2.wav",
-      "CachePath": "C6/{C6DC705A-56B7-DD08-CE24-0C63C41E2C0C}.wem"
+      "CachePath": "00/{00000000-0000-0000-0000-000000000000}.wem"
      },
      {
       "Id": "71944599",
@@ -29,7 +29,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "game4-ui.wav",
-      "CachePath": "4B/{4B51D32E-B41F-0A2C-E6F5-B581E476984A}.wem"
+      "CachePath": "00/{00000000-0000-0000-0000-000000000000}.wem"
      },
      {
       "Id": "109046689",
@@ -37,7 +37,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "game2-ui.wav",
-      "CachePath": "A1/{A1FBA647-52BF-8960-0154-F34EBE126EBB}.wem"
+      "CachePath": "00/{00000000-0000-0000-0000-000000000000}.wem"
      },
      {
       "Id": "152114452",
@@ -45,7 +45,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "gear-shift-3.wav",
-      "CachePath": "2F/{2FD81D77-AAFE-B635-4E32-3B33981A1209}.wem"
+      "CachePath": "00/{00000000-0000-0000-0000-000000000000}.wem"
      },
      {
       "Id": "207371283",
@@ -53,7 +53,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "4k-rpm-idle-loop.wav",
-      "CachePath": "26/{26F3CB1C-2B22-879F-5078-10C6E9811A5C}.wem"
+      "CachePath": "00/{00000000-0000-0000-0000-000000000000}.wem"
      },
      {
       "Id": "226987477",
@@ -61,7 +61,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "2k-rpm-idle-loop.wav",
-      "CachePath": "3A/{3A4DD53C-CC05-8E6E-06D6-7F93A68C7665}.wem"
+      "CachePath": "00/{00000000-0000-0000-0000-000000000000}.wem"
      },
      {
       "Id": "377713728",
@@ -69,7 +69,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "ambience-loop_2.wav",
-      "CachePath": "34/{340554EF-1336-7E33-4CE7-4A264E66899C}.wem"
+      "CachePath": "00/{00000000-0000-0000-0000-000000000000}.wem"
      },
      {
       "Id": "414089109",
@@ -77,7 +77,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "game3-ui.wav",
-      "CachePath": "35/{35EC7C95-5BB8-8849-F450-DFA96E452E50}.wem"
+      "CachePath": "00/{00000000-0000-0000-0000-000000000000}.wem"
      },
      {
       "Id": "423541099",
@@ -85,7 +85,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "3k-rpm-idle-loop.wav",
-      "CachePath": "92/{92B36128-24D8-FCEC-0942-6C0B1BCA5EF4}.wem"
+      "CachePath": "00/{00000000-0000-0000-0000-000000000000}.wem"
      },
      {
       "Id": "427793532",
@@ -93,7 +93,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "0k-rpm-idle-loop.wav",
-      "CachePath": "0D/{0D44EF50-57BF-2920-2A01-2070285592AB}.wem"
+      "CachePath": "00/{00000000-0000-0000-0000-000000000000}.wem"
      },
      {
       "Id": "473609348",
@@ -101,7 +101,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "click-clack-loop.wav",
-      "CachePath": "96/{96DE1C02-D20C-8629-4AA1-B99B98A05AC3}.wem"
+      "CachePath": "00/{00000000-0000-0000-0000-000000000000}.wem"
      },
      {
       "Id": "524820622",
@@ -109,7 +109,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "gear-shift-5.wav",
-      "CachePath": "9A/{9A4E292E-BCB6-120D-5F7B-56BC9196411E}.wem"
+      "CachePath": "00/{00000000-0000-0000-0000-000000000000}.wem"
      },
      {
       "Id": "535750132",
@@ -117,7 +117,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "1k-rpm-idle-loop.wav",
-      "CachePath": "DE/{DEE129DB-47A3-457B-BEFC-35AD521F9EE2}.wem"
+      "CachePath": "00/{00000000-0000-0000-0000-000000000000}.wem"
      },
      {
       "Id": "605112290",
@@ -125,7 +125,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "gear-shift-4.wav",
-      "CachePath": "0D/{0D0AF4A4-2CFD-3AE0-66A5-BABF853EBCE6}.wem"
+      "CachePath": "00/{00000000-0000-0000-0000-000000000000}.wem"
      },
      {
       "Id": "688959639",
@@ -133,7 +133,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "ambience-loop.wav",
-      "CachePath": "58/{5801BEB7-958A-9A09-B13A-4E24A23E2211}.wem"
+      "CachePath": "00/{00000000-0000-0000-0000-000000000000}.wem"
      },
      {
       "Id": "765596562",
@@ -141,7 +141,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "click-clack-loop.wav",
-      "CachePath": "12/{12C8C6C0-F294-D7CA-47C2-AD468DAC11D3}.wem"
+      "CachePath": "00/{00000000-0000-0000-0000-000000000000}.wem"
      },
      {
       "Id": "845289816",
@@ -149,7 +149,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "knock.wav",
-      "CachePath": "95/{956FD8D0-5DB6-62F9-4A9D-AF83E9DC85D7}.wem"
+      "CachePath": "00/{00000000-0000-0000-0000-000000000000}.wem"
      },
      {
       "Id": "894716371",
@@ -157,7 +157,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "gear-shift-1.wav",
-      "CachePath": "9A/{9A4E292E-BCB6-120D-5F7B-56BC9196411E}.wem"
+      "CachePath": "00/{00000000-0000-0000-0000-000000000000}.wem"
      },
      {
       "Id": "984636645",
@@ -165,7 +165,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "5k-rpm-idle-loop.wav",
-      "CachePath": "4B/{4BD9458D-B446-8D77-DA86-E433C0C1F6E1}.wem"
+      "CachePath": "00/{00000000-0000-0000-0000-000000000000}.wem"
      },
      {
       "Id": "1015857121",
@@ -173,7 +173,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "game1-ui.wav",
-      "CachePath": "39/{390449EC-C67E-9DF5-57C3-76F71EE7F62B}.wem"
+      "CachePath": "00/{00000000-0000-0000-0000-000000000000}.wem"
      }
     ],
     "Events": [
@@ -240,8 +240,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\MenuClick",
       "GUID": "{E68AF364-669F-4862-B897-2DFAC4F6E9A7}",
       "DurationType": "OneShot",
-      "DurationMin": "0.13635416",
-      "DurationMax": "0.13635416",
+      "DurationMin": "0",
+      "DurationMax": "0",
       "MediaRefs": [
        {
         "Id": "845289816"
@@ -254,8 +254,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\TriggerAlert",
       "GUID": "{2E60027A-973F-44A1-B5B7-C3DC4C78FDC6}",
       "DurationType": "OneShot",
-      "DurationMin": "0.8181667",
-      "DurationMax": "0.8181667",
+      "DurationMin": "0",
+      "DurationMax": "0",
       "MediaRefs": [
        {
         "Id": "71944599"
@@ -277,8 +277,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\TurnSignal",
       "GUID": "{174DE36F-CB14-496C-B9F1-AD52E32B501B}",
       "DurationType": "OneShot",
-      "DurationMin": "0.82528394",
-      "DurationMax": "0.82528394",
+      "DurationMin": "0",
+      "DurationMax": "0",
       "MediaRefs": [
        {
         "Id": "473609348"
@@ -299,6 +299,6 @@
     ]
    }
   ],
-  "FileHash": "{D11766BC-F57A-7773-F7E4-9B460614712F}"
+  "FileHash": "{ECD4D41B-957A-3A97-EEB5-2F405FACE664}"
  }
 }
