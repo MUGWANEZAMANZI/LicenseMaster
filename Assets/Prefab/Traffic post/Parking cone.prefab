@@ -13,7 +13,9 @@ GameObject:
   - component: {fileID: 1247231160631539552}
   - component: {fileID: 690662265617768846}
   - component: {fileID: 3476429904222876996}
-  - component: {fileID: 1424064342729440414}
+  - component: {fileID: 2461862377361953476}
+  - component: {fileID: 8362187557821900915}
+  - component: {fileID: 5118268959365750165}
   m_Layer: 0
   m_Name: Parking cone
   m_TagString: Untagged
@@ -35060,8 +35062,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5944690679920882022}
   m_Mesh: {fileID: 0}
---- !u!64 &1424064342729440414
-MeshCollider:
+--- !u!65 &2461862377361953476
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -35078,7 +35080,45 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 3
+  m_Size: {x: 0.43249592, y: 0.52356815, z: 0.888471}
+  m_Center: {x: -0.13827641, y: 0.26147032, z: 0.2961803}
+--- !u!54 &8362187557821900915
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5944690679920882022}
+  serializedVersion: 4
+  m_Mass: 5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &5118268959365750165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5944690679920882022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa07c8be33307c741ad66221d49b0aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

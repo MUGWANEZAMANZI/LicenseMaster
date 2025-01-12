@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using AK.Wwise;
 using UnityEngine;
+using UnityEngine.UIElements;
 
-public enum Violations 
+public enum Violations
 {
     Speed,
     OneWay,
@@ -16,6 +17,9 @@ public class LevelManager : MonoBehaviour
 {
 
     [Header("Level Info")]
+
+    [SerializeField] public List<ParkingZone> parkingZones;
+    [SerializeField] public int objectivesFound = 0;
     [SerializeField] public float levelTime = 0;
     [SerializeField] public int points = 100;
     [SerializeField] public int violations = 0;
@@ -30,10 +34,14 @@ public class LevelManager : MonoBehaviour
     [SerializeField] public CarController player;
     [SerializeField] public Canvas HudOverlay;
     [SerializeField] public GameObject violationTextPrefab;
+    [SerializeField] public GameObject levelEndScreen;
+    [SerializeField] public GameObject parkedScreen;
 
     [Header("Wwise")]
     [SerializeField] public AK.Wwise.Event LevelStart;
     [SerializeField] public AK.Wwise.Event TriggerAlert;
+    [SerializeField] public AK.Wwise.Event LevelWin;
+    [SerializeField] public AK.Wwise.Event TriggerWarning;
 
     public static LevelManager instance;
     private static int speedLimitDeduction = 5;
@@ -62,7 +70,7 @@ public class LevelManager : MonoBehaviour
         {
             Debug.LogError("[" + name + "] Missing player reference on this GameOjbect.");
         }
-        
+
         LevelStart.Post(gameObject);
     }
 
@@ -85,7 +93,7 @@ public class LevelManager : MonoBehaviour
         if (player.wrongWay)
         {
             points -= oneWayDeduction;
-            TriggerAlert.Post(gameObject);
+            TriggerWarning.Post(gameObject);
             incuredViolations.Add(Violations.OneWay);
         }
         oneWayViolationCoroutine = false;
@@ -101,7 +109,7 @@ public class LevelManager : MonoBehaviour
         if (player.offRoad)
         {
             points -= offRoadDeduction;
-            TriggerAlert.Post(gameObject);
+            TriggerWarning.Post(gameObject);
             incuredViolations.Add(Violations.OffRoad);
         }
         offRoadViolationCoroutine = false;
@@ -117,7 +125,7 @@ public class LevelManager : MonoBehaviour
         if (CarController.speed > currentZoneSpeedLimit)
         {
             points -= speedLimitDeduction;
-            TriggerAlert.Post(gameObject);
+            TriggerWarning.Post(gameObject);
             incuredViolations.Add(Violations.Speed);
         }
         speedLimitViolationCoroutine = false;
@@ -149,7 +157,7 @@ public class LevelManager : MonoBehaviour
         if (stopViolationCoroutine) return;
         StartCoroutine(StopViolationDebounce());
         points -= stopZoneDeduction;
-        TriggerAlert.Post(gameObject);
+        TriggerWarning.Post(gameObject);
         incuredViolations.Add(Violations.Stop);
     }
 
@@ -158,7 +166,21 @@ public class LevelManager : MonoBehaviour
         if (collisionViolationCoroutine) return;
         StartCoroutine(CollisionViolationDebounce());
         points -= collisionDeduction;
-        TriggerAlert.Post(gameObject);
+        TriggerWarning.Post(gameObject);
         incuredViolations.Add(Violations.Collision);
     }
-}   
+
+    public void CompleteObjective()
+    {
+        if (objectivesFound < parkingZones.Count - 1)
+        {
+            objectivesFound++;
+            parkedScreen.SetActive(true);
+        }
+        else
+        {
+            levelEndScreen.SetActive(true);
+            LevelWin.Post(gameObject);
+        }
+    }
+}

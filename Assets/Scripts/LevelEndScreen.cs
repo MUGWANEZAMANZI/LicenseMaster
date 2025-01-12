@@ -1,9 +1,6 @@
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using System;
-using Unity.VisualScripting;
 
 public class LevelEndScreen : MonoBehaviour
 {

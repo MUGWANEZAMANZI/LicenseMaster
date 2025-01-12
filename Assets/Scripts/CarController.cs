@@ -67,7 +67,7 @@ public class CarController : MonoBehaviour
   [HideInInspector]
   public bool isTractionLocked;
 
-  private PlayerControls controls;
+  public PlayerControls controls;
   private Rigidbody rb;
   public static float steeringAxis; // Represents the steering wheel. Values from -1 to 1.
   private float throttleAxis; // Used to know whether the throttle has reached the maximum value. It goes from -1 to 1.
@@ -91,7 +91,6 @@ public class CarController : MonoBehaviour
 
   void Awake()
   {
-    controls = PlayerControls.instance;
     cam.cullingMask = 31;
   }
   void Start()
@@ -112,7 +111,7 @@ public class CarController : MonoBehaviour
     if (controls.RadioInput && radioOn)
     {
       radioOn = false;
-      RadioStop.Post(gameObject);
+      // RadioStop.Post(gameObject);
     }
 
     if (controls.RadioInput && !radioOn)
