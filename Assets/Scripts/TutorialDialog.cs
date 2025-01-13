@@ -8,7 +8,9 @@ public class TutorialDialog : MonoBehaviour
         [SerializeField] public TextMeshProUGUI textComponent;
 
         [Header("Wwise")]
-        [SerializeField] AK.Wwise.Event MenuText;
+        [SerializeField] public AK.Wwise.Event MenuText;
+        [SerializeField] public AK.Wwise.Event RadioStart;
+
         
         public string[] lines;
         public float textSpeed;
@@ -62,6 +64,7 @@ public class TutorialDialog : MonoBehaviour
             } 
             else {
                 //Check if AutoLevelStart has already started the level before calling the Start level function.
+                RadioStart.Post(gameObject);
                 gameObject.SetActive(false);
             }
 

@@ -85,7 +85,6 @@ public class LevelManager : MonoBehaviour
 
     private IEnumerator OneWayViolation()
     {
-        Debug.Log(message: "Hit!");
         oneWayViolationCoroutine = true;
         GameObject warning = Instantiate(violationTextPrefab, new Vector3(HudOverlay.transform.position.x, 300, HudOverlay.transform.position.z), HudOverlay.transform.rotation, HudOverlay.transform);
         warning.GetComponent<ViolationDialogWarning>().text.text = "Wrong Way";

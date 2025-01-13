@@ -75,7 +75,7 @@ public class CarController : MonoBehaviour
   private bool deceleratingCar;
   private bool leftBlinkerCoroutine = false;
   private bool rightBlinkerCoroutine = false;
-  private bool radioOn = false;
+  private bool radioOn = true;
 
   WheelFrictionCurve FLwheelFriction;
   float FLWextremumSlip;
@@ -96,7 +96,6 @@ public class CarController : MonoBehaviour
     rb = gameObject.GetComponent<Rigidbody>();
     rb.centerOfMass = bodyMassCenter;
     CarEngineStart.Post(gameObject);
-    RadioStart.Post(gameObject);
   }
 
   void Update()
