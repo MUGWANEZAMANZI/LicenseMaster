@@ -4,7 +4,11 @@ using System.Collections;
 
 public class TutorialDialog : MonoBehaviour
 {
-        public TextMeshProUGUI textComponent;
+        [Header("References")]
+        [SerializeField] public TextMeshProUGUI textComponent;
+
+        [Header("Wwise")]
+        [SerializeField] AK.Wwise.Event MenuText;
         
         public string[] lines;
         public float textSpeed;
@@ -43,6 +47,7 @@ public class TutorialDialog : MonoBehaviour
             foreach (char c in lines[index].ToCharArray())
             {
                 textComponent.text += c;
+                MenuText.Post(gameObject);
                 yield return new WaitForSeconds(textSpeed);
             }
         }

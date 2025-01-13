@@ -180,7 +180,7 @@ public class LevelManager : MonoBehaviour
         else
         {
             levelEndScreen.SetActive(true);
-            LevelWin.Post(gameObject);
+            if (points >= 75) LevelWin.Post(gameObject);
         }
     }
 }
