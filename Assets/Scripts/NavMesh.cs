@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.Search;
 using UnityEngine;
 using UnityEngine.AI;
@@ -16,7 +17,7 @@ public class NavMesh : MonoBehaviour
     int i =0;
     public GameObject Leadcar;
     private float timer = 12f;
-    
+    public   float distStop=50f;
   
    public float distance;
     public void Start()
@@ -36,18 +37,17 @@ public void GoToNext()
 //foreach (GameObject wpt in productionQueue)
 //{
 distance = Vector3.Distance(wpt[i].transform.position,Leadcar.transform.position);               
-if(distance <= 180 ){
+if(distance <= distStop){
  wpt[i].gameObject.SetActive(false);
 
  i++;
-Debug.Log(wpt[i]);
    }
 
 
    
 if(i==wpt.Length-1)
 i=0;
-wpt[i].SetActive(true);
+//wpt[i].SetActive(true);
 agent.SetDestination(wpt[i].transform.position);
 /*if(i==4&&distance <= 250)
   { 
