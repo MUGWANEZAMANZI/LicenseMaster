@@ -21,8 +21,7 @@ public class CarController : MonoBehaviour
   public float steeringSpeed = 0.5f;
   [Range(100, 2000)]
   public int brakeForce = 350;
-  [Range(1, 10)]
-  public int decelerationMultiplier = 2;
+  public float decelerationMultiplier = 2;
   [Range(1, 10)]
   public int handbrakeDriftMultiplier = 5;
   [SerializeField] public bool leftBlinkerOn;
@@ -105,11 +104,18 @@ public class CarController : MonoBehaviour
     localVelocityX = transform.InverseTransformDirection(rb.velocity).x;
     localVelocityZ = transform.InverseTransformDirection(rb.velocity).z;
 
-    if (Input.GetKeyDown(KeyCode.R) && radioOn)
+    if (Input.GetKeyUp(KeyCode.R) && radioOn)
     {
       radioOn = false;
       RadioStop.Post(gameObject);
     }
+
+    if (Input.GetKeyUp(KeyCode.R) && !radioOn)
+    {
+      radioOn = true;
+      RadioStart.Post(gameObject);
+    }
+
 
     if (wheelsOffRoad.Count > 1)
     {

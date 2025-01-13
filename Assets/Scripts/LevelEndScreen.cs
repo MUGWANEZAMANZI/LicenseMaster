@@ -4,12 +4,13 @@ using TMPro;
 
 public class LevelEndScreen : MonoBehaviour
 {
+    [SerializeField] public TextMeshProUGUI header;
     [SerializeField] public TextMeshProUGUI levelTimeText;
     [SerializeField] public TextMeshProUGUI violationsText;
     [SerializeField] public TextMeshProUGUI finalScoreText;
 
     private Dictionary<Violations, int> violationsCount = new Dictionary<Violations, int>();
-    void Start()
+    void OnEnable()
     {
         Time.timeScale = 0;
         // Set Level Time Text
@@ -35,5 +36,16 @@ public class LevelEndScreen : MonoBehaviour
 
         // Set Final Score
         finalScoreText.text = "Final Score - " + LevelManager.instance.points;
+        if (LevelManager.instance.points >= 75) 
+        {
+            header.text = "License Earned!";
+            header.color = Color.green;
+        }
+        if (LevelManager.instance.points < 75) 
+        {
+            header.color = Color.red;
+            header.text = "Failed Exam";
+        }
+
     }
 }

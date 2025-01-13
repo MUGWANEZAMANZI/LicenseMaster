@@ -114,7 +114,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 261786959625234688}
-  - component: {fileID: 5135156708204615449}
   - component: {fileID: 4167181727724198349}
   m_Layer: 0
   m_Name: Car
@@ -141,33 +140,6 @@ Transform:
   - {fileID: 8090159800910900445}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &5135156708204615449
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 642287924342879162}
-  serializedVersion: 4
-  m_Mass: 600
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &4167181727724198349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e7bd5f77b79ce74aae157c83deb4af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 0}
   maxSpeed: 90
   maxReverseSpeed: 45
   accelerationRate: 2
@@ -188,7 +161,17 @@ MonoBehaviour:
   brakeForce: 350
   decelerationMultiplier: 2
   handbrakeDriftMultiplier: 5
+  leftBlinkerOn: 0
+  rightBlinkerOn: 0
+  offRoad: 0
+  wrongWay: 0
+  wheelsOffRoad: []
   bodyMassCenter: {x: 0, y: 0, z: 0}
+  blinkerOff: {fileID: 0}
+  blinkerOn: {fileID: 0}
+  LeftBlinker: {fileID: 0}
+  RightBlinker: {fileID: 0}
+  BrakeLight: {fileID: 0}
   frontLeftMesh: {fileID: 8994654994770003306}
   frontLeftCollider: {fileID: 2239677824950174677}
   frontRightMesh: {fileID: 5789031656516607038}
@@ -197,9 +180,29 @@ MonoBehaviour:
   rearLeftCollider: {fileID: 8615825633152659129}
   rearRightMesh: {fileID: 4246667680666587729}
   rearRightCollider: {fileID: 8706808774334851022}
-  speed: 0
+  CarEngineStart:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  TurnSignal:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  PlayerSpeed:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  RadioStart:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  RadioStop:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   isDrifting: 0
   isTractionLocked: 0
+  controls: {fileID: 0}
 --- !u!1 &1017544330230184320
 GameObject:
   m_ObjectHideFlags: 0
