@@ -14,11 +14,15 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID CARENGINESTART = 2231332761U;
+        static const AkUniqueID LEVELLOSE = 1070923030U;
         static const AkUniqueID LEVELSTART = 3372421815U;
+        static const AkUniqueID LEVELWIN = 2487243565U;
         static const AkUniqueID MENUCLICK = 3711598968U;
+        static const AkUniqueID MENUTEXT = 2607093533U;
         static const AkUniqueID RADIOSTART = 622084806U;
         static const AkUniqueID RADIOSTOP = 1232312710U;
         static const AkUniqueID TRIGGERALERT = 293751399U;
+        static const AkUniqueID TRIGGERWARNING = 2319856225U;
         static const AkUniqueID TURNSIGNAL = 3858101368U;
     } // namespace EVENTS
 
@@ -48,7 +52,10 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID MASTERVOLUME = 2918011349U;
+        static const AkUniqueID MUSICVOLUME = 2346531308U;
         static const AkUniqueID PLAYERSPEED = 1493153371U;
+        static const AkUniqueID SFXVOLUME = 988953028U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS

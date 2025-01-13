@@ -754,6 +754,36 @@
 						</Sound>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="UI-Lose" ID="{DF51A353-2758-4183-9609-DB51086D7D69}" ShortID="658842220">
+					<ChildrenList>
+						<Sound Name="LOSE-Sound" ID="{EFFB6D33-14F9-44B1-B4E9-70D04703BB37}" ShortID="40597300">
+							<PropertyList>
+								<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="GUI" ID="{7325A0F9-3D81-41DC-AD67-C1953B1F2055}" WorkUnitID="{852B9B6F-2D70-4700-88C4-AD260B64C804}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="LOSE Sound" ID="{49AF1713-B25F-4D9F-83A8-F6DAC48F12A2}">
+									<Language>SFX</Language>
+									<AudioFile>LOSE Sound.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="407565043"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="LOSE Sound" ID="{49AF1713-B25F-4D9F-83A8-F6DAC48F12A2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

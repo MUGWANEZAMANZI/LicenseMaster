@@ -15,9 +15,13 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="CarEngineStart" ID="{DBBAA77F-520F-449D-A869-8B8390CDC165}" WorkUnitID="{E5FF49E0-91AB-46C9-A0A1-AD6D1EBC17D7}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="TriggerAlert" ID="{2E60027A-973F-44A1-B5B7-C3DC4C78FDC6}" WorkUnitID="{E5FF49E0-91AB-46C9-A0A1-AD6D1EBC17D7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="TriggerWarning" ID="{F9FA5EBB-01DA-453F-A09D-CD6194EE8798}" WorkUnitID="{E5FF49E0-91AB-46C9-A0A1-AD6D1EBC17D7}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="LevelStart" ID="{2807A1F4-3A44-4642-9036-0C65DF1EFBDF}" WorkUnitID="{E5FF49E0-91AB-46C9-A0A1-AD6D1EBC17D7}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="MenuClick" ID="{E68AF364-669F-4862-B897-2DFAC4F6E9A7}" WorkUnitID="{E5FF49E0-91AB-46C9-A0A1-AD6D1EBC17D7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="LevelWin" ID="{6C2BF8A0-F09D-48AD-9DEE-8A42DF14F5D3}" WorkUnitID="{E5FF49E0-91AB-46C9-A0A1-AD6D1EBC17D7}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="TurnSignal" ID="{174DE36F-CB14-496C-B9F1-AD52E32B501B}" WorkUnitID="{E5FF49E0-91AB-46C9-A0A1-AD6D1EBC17D7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="LevelLose" ID="{9380B71C-7076-4B36-B0B2-2234C56387D4}" WorkUnitID="{E5FF49E0-91AB-46C9-A0A1-AD6D1EBC17D7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="MenuText" ID="{C4311994-3DF8-4D4F-8ED1-291CA38362B0}" WorkUnitID="{E5FF49E0-91AB-46C9-A0A1-AD6D1EBC17D7}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
