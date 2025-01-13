@@ -98,6 +98,7 @@
 						<Action Name="" ID="{EEC5786C-E481-4340-8D89-02EBD30C53A0}" ShortID="542774174">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -131,6 +132,13 @@
 				</Event>
 				<Event Name="LevelWin" ID="{6C2BF8A0-F09D-48AD-9DEE-8A42DF14F5D3}">
 					<ChildrenList>
+						<Action Name="" ID="{3A5EED9B-B0E6-4D8D-B548-C147FEA81781}" ShortID="488518220">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
 						<Action Name="" ID="{475BAC05-27BE-4E17-A819-7B5027462103}" ShortID="649270090">
 							<ReferenceList>
 								<Reference Name="Target">
@@ -142,6 +150,13 @@
 				</Event>
 				<Event Name="LevelLose" ID="{9380B71C-7076-4B36-B0B2-2234C56387D4}">
 					<ChildrenList>
+						<Action Name="" ID="{4DC2B909-A24F-4CDE-8AFA-DC4679759251}" ShortID="580592429">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
 						<Action Name="" ID="{9E2F4395-57E3-4760-93FD-E1230133DC6E}" ShortID="912573057">
 							<ReferenceList>
 								<Reference Name="Target">

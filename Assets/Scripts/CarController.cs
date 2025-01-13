@@ -86,7 +86,6 @@ public class CarController : MonoBehaviour
   WheelFrictionCurve RRwheelFriction;
   float RRWextremumSlip;
 
-
   void Awake()
   {
     cam.cullingMask = 31;
@@ -106,16 +105,10 @@ public class CarController : MonoBehaviour
     localVelocityX = transform.InverseTransformDirection(rb.velocity).x;
     localVelocityZ = transform.InverseTransformDirection(rb.velocity).z;
 
-    if (controls.RadioInput && radioOn)
+    if (Input.GetKeyDown(KeyCode.R) && radioOn)
     {
       radioOn = false;
       RadioStop.Post(gameObject);
-    }
-
-    if (controls.RadioInput && !radioOn)
-    {
-      radioOn = true;
-      RadioStart.Post(gameObject);
     }
 
     if (wheelsOffRoad.Count > 1)
