@@ -32,6 +32,7 @@ public class MenuManager : MonoBehaviour
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
+        settingsMenuUI.SetActive(false);
         HudOverlayUI.SetActive(true);
         Time.timeScale = 1f;
         gameIsPaused = false;

@@ -39,8 +39,8 @@ public class LevelManager : MonoBehaviour
 
     [Header("Wwise")]
     [SerializeField] public AK.Wwise.Event LevelStart;
-    [SerializeField] public AK.Wwise.Event TriggerAlert;
     [SerializeField] public AK.Wwise.Event LevelWin;
+    [SerializeField] public AK.Wwise.Event LevelLose;
     [SerializeField] public AK.Wwise.Event TriggerWarning;
 
     public static LevelManager instance;
@@ -181,6 +181,7 @@ public class LevelManager : MonoBehaviour
         {
             levelEndScreen.SetActive(true);
             if (points >= 75) LevelWin.Post(gameObject);
+            if (points < 75) LevelLose.Post(gameObject);
         }
     }
 }

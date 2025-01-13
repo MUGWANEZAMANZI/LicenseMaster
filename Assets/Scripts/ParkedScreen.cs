@@ -1,13 +1,19 @@
 using UnityEngine;
 using TMPro;
+using AK.Wwise;
 
 public class ParkedScreen : MonoBehaviour
 {
+    [Header("References")]
     [SerializeField] public TextMeshProUGUI levelTimeText;
     [SerializeField] public TextMeshProUGUI objectivesText;
 
+    [Header("Wwise")]
+    [SerializeField] public AK.Wwise.Event TriggerAlert;
+
     void OnEnable()
     {
+        TriggerAlert.Post(gameObject);
         Time.timeScale = 0;
         // Set Level Time Text
         float time = LevelManager.instance.levelTime;

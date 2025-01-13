@@ -1,9 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Profiling;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class CarController : MonoBehaviour
 {
@@ -21,7 +19,7 @@ public class CarController : MonoBehaviour
   public int maxSteeringAngle = 27; // The maximum angle that the tires can reach while rotating the steering wheel.
   [Range(0.1f, 1f)]
   public float steeringSpeed = 0.5f;
-  [Range(100, 600)]
+  [Range(100, 2000)]
   public int brakeForce = 350;
   [Range(1, 10)]
   public int decelerationMultiplier = 2;
@@ -98,20 +96,21 @@ public class CarController : MonoBehaviour
     rb = gameObject.GetComponent<Rigidbody>();
     rb.centerOfMass = bodyMassCenter;
     CarEngineStart.Post(gameObject);
+    RadioStart.Post(gameObject);
   }
 
   void Update()
   {
     // Calculate speed of car and set local velocity for reference.
     speed = ((2 * Mathf.PI * frontLeftCollider.radius * frontLeftCollider.rpm * 60) / 1000) / 2.5f; // Dividing by three for now just cause
-    PlayerSpeed.SetValue(gameObject, speed); // Set Wwise RTPC
+    PlayerSpeed.SetValue(gameObject, Math.Abs(speed)); // Set Wwise RTPC
     localVelocityX = transform.InverseTransformDirection(rb.velocity).x;
     localVelocityZ = transform.InverseTransformDirection(rb.velocity).z;
 
     if (controls.RadioInput && radioOn)
     {
       radioOn = false;
-      // RadioStop.Post(gameObject);
+      RadioStop.Post(gameObject);
     }
 
     if (controls.RadioInput && !radioOn)
