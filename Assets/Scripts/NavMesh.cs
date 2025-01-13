@@ -1,58 +1,70 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Search;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class NavMesh : MonoBehaviour
 {
-    public Transform player;
+ //   public List<GameObject> productionQueue = new List<GameObject>();
+   // public Transform target;
+    public GameObject [] wpt;
     private NavMeshAgent agent;
-   // [SerializeField] Transform[] waypoints;
-  //  [SerializeField] private int destinationPoint;
-  //  public GameObject stop1;
-  // public GameObject stop2;
-    bool _continue=true;
+  
+    bool _continue=false;
+    int i =0;
+    public GameObject Leadcar;
     private float timer = 12f;
+    
+  
+   public float distance;
     public void Start()
     {
-        // stop1.SetActive(true);
-        // stop2.SetActive(false);
+         i=0;
+   //  foreach (GameObject wpt in productionQueue)
+   wpt[1].SetActive(false);
+   wpt[2].SetActive(false);
+   wpt[3].SetActive(false);
+    wpt[4].SetActive(false);
         agent = GetComponent<NavMeshAgent>();
-        GetComponent<NavMeshAgent>().speed = 15f;
+        agent.GetComponent<NavMeshAgent>().speed = 35f;
     }
-/*(    }
-public void GoToNextPoint()
-    {
-        if (waypoints.Length == 0)
-            return;
+    
+public void GoToNext()
+{
+//foreach (GameObject wpt in productionQueue)
+//{
+distance = Vector3.Distance(wpt[i].transform.position,Leadcar.transform.position);               
+if(distance <= 180 ){
+ wpt[i].gameObject.SetActive(false);
 
-        var NextPoint = Random.Range(0, waypoints.Length);
-        destinationPoint = (destinationPoint + NextPoint) % waypoints.Length;
-    }
-*/
- /*  public void OnTriggerEnter(Collider other)
-    {
-        stop2.SetActive(true);
-       // if (other.gameObject.CompareTag("Player")) {
-           _continue = false;
-         
-       //   agent.transform.position = agent.transform.position;
-       // }
-    }
- */
+ i++;
+Debug.Log(wpt[i]);
+   }
+
+
+   
+if(i==wpt.Length-1)
+i=0;
+wpt[i].SetActive(true);
+agent.SetDestination(wpt[i].transform.position);
+/*if(i==4&&distance <= 250)
+  { 
+    wpt[1].SetActive(true);
+   wpt[2].SetActive(false);
+   wpt[3].SetActive(false);
+    wpt[4].SetActive(false);
+     _continue=false;
+  }
+  */
+}
+
+ 
     public void Update()
     {
-        if (_continue)
-        {
-            agent.SetDestination(player.position);
-           // stop1.SetActive(false);
-        }
-        timer -= Time.deltaTime;
-        if (timer <=0 && !_continue)
-        {
-           // stop2.SetActive(false);
-            agent.SetDestination(player.position);
-        }
+     
+          GoToNext();
       
     }
 }
