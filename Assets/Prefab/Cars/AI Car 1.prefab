@@ -109,7 +109,7 @@ Transform:
   m_GameObject: {fileID: 1535619826652955118}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.885175, y: 0.3824905, z: -1.5584387}
+  m_LocalPosition: {x: 0.946, y: 0, z: -1.574}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -123,8 +123,8 @@ WheelCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1535619826652955118}
   serializedVersion: 2
-  m_Center: {x: 0, y: 0.15, z: 0}
-  m_Radius: 0.36
+  m_Center: {x: 0, y: 0.52, z: 0}
+  m_Radius: 0.51
   m_SuspensionSpring:
     spring: 35000
     damper: 4500
@@ -595,7 +595,7 @@ Transform:
   m_GameObject: {fileID: 3827370159157522477}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.86715794, y: 0.35803863, z: 1.5441229}
+  m_LocalPosition: {x: 0.97, y: 0, z: 1.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -609,8 +609,8 @@ WheelCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3827370159157522477}
   serializedVersion: 2
-  m_Center: {x: 0, y: 0.15, z: 0}
-  m_Radius: 0.36
+  m_Center: {x: 0, y: 0.52, z: 0}
+  m_Radius: 0.51
   m_SuspensionSpring:
     spring: 35000
     damper: 4500
@@ -680,10 +680,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 465597299220804174}
-  - component: {fileID: 4189593675576510349}
   - component: {fileID: 1595811278867863791}
+  - component: {fileID: 6002419545123859802}
   m_Layer: 0
-  m_Name: Car 1
+  m_Name: AI Car 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -707,27 +707,6 @@ Transform:
   - {fileID: 2599343297548973374}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4189593675576510349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4748193870195252413}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f059d5db1e7ddc439ce3d3ee2e3a061, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wpt:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Leadcar: {fileID: 4748193870195252413}
-  distStop: 50
-  distance: 515.0264
 --- !u!195 &1595811278867863791
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -750,6 +729,23 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &6002419545123859802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4748193870195252413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43d00b8df737219408d333544ecd78ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  waypointProximityDistance: 50
+  distanceToWaypoint: 0
+  maxSpeed: 35
+  minSpeed: 0
 --- !u!1 &6783897160934857010
 GameObject:
   m_ObjectHideFlags: 0
@@ -776,7 +772,7 @@ Transform:
   m_GameObject: {fileID: 6783897160934857010}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.8671584, y: 0.35803863, z: 1.5441229}
+  m_LocalPosition: {x: -0.93, y: 0, z: 1.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -790,8 +786,8 @@ WheelCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6783897160934857010}
   serializedVersion: 2
-  m_Center: {x: 0, y: 0.15, z: 0}
-  m_Radius: 0.36
+  m_Center: {x: 0, y: 0.52, z: 0}
+  m_Radius: 0.51
   m_SuspensionSpring:
     spring: 35000
     damper: 4500
@@ -882,7 +878,7 @@ Transform:
   m_GameObject: {fileID: 6988564205871559418}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.8851747, y: 0.3824905, z: -1.5584387}
+  m_LocalPosition: {x: -0.934, y: 0, z: -1.546}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -896,8 +892,8 @@ WheelCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6988564205871559418}
   serializedVersion: 2
-  m_Center: {x: 0, y: 0.15, z: 0}
-  m_Radius: 0.36
+  m_Center: {x: 0, y: 0.52, z: 0}
+  m_Radius: 0.51
   m_SuspensionSpring:
     spring: 35000
     damper: 4500
