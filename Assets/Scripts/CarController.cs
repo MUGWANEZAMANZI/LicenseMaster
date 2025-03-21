@@ -9,7 +9,7 @@ public class CarController : MonoBehaviour
   [SerializeField] public Camera cam;
 
   [Header("Car Params")]
-  [Range(20, 190)]
+  [Range(20, 1000)]
   public int maxSpeed = 90;
   [Range(10, 120)]
   public int maxReverseSpeed = 45;
