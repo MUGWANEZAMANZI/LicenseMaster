@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -20,6 +19,7 @@ public class Car : MonoBehaviour
     public float decelerationRate = 0.5f;
     private float currentSpeed; //This is to store the AI current speed.
     public bool hasStopped = false;
+    public float parkingTime = 3f; // Time spent parking
 
     private void Start()
     {
@@ -88,5 +88,40 @@ public class Car : MonoBehaviour
             yield return null;
         }
         agent.speed = 0;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "StopSign")
+        {
+            Debug.Log("STOP SIGN FOR AI");
+            StartCoroutine(StopSigh());
+        }
+        else if (other.gameObject.tag == "AiParkZone")
+        {
+            Debug.Log("Parking FOR AI");
+            StartCoroutine(Parking());
+        }
+    }
+
+    private IEnumerator StopSigh()
+    {
+        hasStopped = true;
+        yield return new WaitForSeconds(parkingTime); // Wait
+        hasStopped = false;
+    }
+
+    private IEnumerator Parking()
+    {
+        // Check if the GameObject is close enough to the target
+        if (Vector3.Distance(transform.position, waypoints[currentWaypoint].position) <= distanceToWaypoint)
+        {
+            // Stop and face the target
+            //transform.position = waypoints[currentWaypoint].position;
+            transform.LookAt(waypoints[currentWaypoint]); // Make the GameObject face the target
+            hasStopped= true;
+            yield return new WaitForSeconds(parkingTime); // Wait
+            hasStopped= false;
+        }
     }
 }
