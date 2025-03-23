@@ -7,7 +7,6 @@ TagManager:
   - Road
   - StopSign
   - AiCar
-  - RoadsNavMesh
   - AiParkZone
   layers:
   - Default
