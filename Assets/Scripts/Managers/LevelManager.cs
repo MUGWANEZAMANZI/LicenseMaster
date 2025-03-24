@@ -10,7 +10,8 @@ public enum Violations
     OneWay,
     Collision,
     Stop,
-    OffRoad
+    OffRoad,
+    TrafficLight,
 }
 
 public class LevelManager : MonoBehaviour
@@ -52,11 +53,13 @@ public class LevelManager : MonoBehaviour
     private static int stopZoneDeduction = 10;
     private static int collisionDeduction = 10;
 
+    [Header("Violation Coroutine")]
     public bool speedLimitViolationCoroutine = false;
     public bool offRoadViolationCoroutine = false;
     public bool oneWayViolationCoroutine = false;
     public bool collisionViolationCoroutine = false;
     public bool stopViolationCoroutine = false;
+    public bool trafficLightCoroutine = false;
 
     private void Awake()
     {
@@ -168,6 +171,12 @@ public class LevelManager : MonoBehaviour
         TriggerWarning.Post(gameObject);
         incuredViolations.Add(Violations.Collision);
     }
+
+    public void RedLightViolation()
+    {
+        if (trafficLightCoroutine) return;
+        Debug.Log("FAILED!!!!!");
+    }    
 
     public void CompleteObjective()
     {
