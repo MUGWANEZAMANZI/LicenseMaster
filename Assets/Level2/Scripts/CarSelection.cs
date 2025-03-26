@@ -24,6 +24,10 @@ public class CarSelection : MonoBehaviour
     {
         next.interactable = index < cars.Length - 1;
         prev.interactable = index > 0;
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     public void Next()
@@ -70,7 +74,11 @@ public class CarSelection : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    public void Race()
+    public void Level1()
+    {
+        SceneManager.LoadScene("Level1");
+    }
+    public void Level2()
     {
         SceneManager.LoadScene("Level2");
     }
