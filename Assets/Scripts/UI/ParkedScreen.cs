@@ -22,7 +22,7 @@ public class ParkedScreen : MonoBehaviour
         levelTimeText.text = string.Format("Level Time - {0:00}:{1:00}", minutes, seconds);
 
         // Set Objective Text
-        objectivesText.text = LevelManager.instance.objectivesFound + "/" + LevelManager.instance.parkingZones.Count + " Parking Spots found.";
+        objectivesText.text = LevelManager.instance.objectivesFound + "/" + LevelManager.instance.parkingZones.Count + "Mission Complete.";
     }
 
     public void Coninue() 

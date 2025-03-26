@@ -17,7 +17,8 @@ public class WelcomeDialog : MonoBehaviour
             "Welcome to the License Master",
             "This is a series of realistic traffic Exams",
             "All intended to test your driving skills",
-            "Are you ready to start the first exam?"
+            "Are you ready to start the first exam?",
+            "Start Left is Level1 andother is 2",
         }
         ) );   
     }
