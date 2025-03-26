@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Car : MonoBehaviour
+public class AiCar : MonoBehaviour
 {
     [SerializeField] public List<Transform> waypoints;
     [SerializeField] public float waypointProximityDistance = 50f;
