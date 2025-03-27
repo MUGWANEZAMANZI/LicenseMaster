@@ -6,6 +6,7 @@ public class ParkingZone : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(playerHasEnteredZone);
         if (playerHasEnteredZone && Mathf.Abs(CarController.speed) < .5) 
         {
             LevelManager.instance.CompleteObjective();
