@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 53
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e07c9b2c97f84356bb2bfac29363e611, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StyleTrainerData:
+    rid: 3211000081864720384
+  m_DefaultStyleData:
+    rid: 3211000081864720385
+  m_DefaultStyleVersion: 0
+  m_DefaultStyles: []
+  m_AssetPath: 
+  m_PreviousProjectIDs: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 3211000081864720384
+      type: {class: StyleTrainerData, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: 8bbd2494-7ca3-48d3-9e57-d386ff08ed8e
+        m_State: 1
+        m_Disposing: 0
+        m_Styles:
+        - rid: 3211000081864720386
+        - rid: 3211000081864720388
+        m_Version: 202231001
+    - rid: 3211000081864720385
+      type: {class: StyleTrainerData, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: 7832a048-467d-4f4e-b743-82f6f4ee60d8
+        m_State: 3
+        m_Disposing: 0
+        m_Styles: []
+        m_Version: 202231001
+    - rid: 3211000081864720386
+      type: {class: StyleData, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: 
+        m_State: 3
+        m_Disposing: 0
+        m_IsFallback: 0
+        m_Thumbnail:
+          rid: 3211000081864720387
+        m_Visible: 1
+        selectedCheckPointGUID: 00000000-0000-0000-0000-000000000000
+        m_FavoriteCheckPointGUID: 00000000-0000-0000-0000-000000000000
+        parentID: 00000000-0000-0000-0000-000000000000
+        m_ProjectID: 8bbd2494-7ca3-48d3-9e57-d386ff08ed8e
+        m_TrainingSteps: 2000
+        m_CheckPoints: []
+        m_SampleOutputPrompts:
+        - 
+        - 
+        - 
+        m_TrainingSetData:
+        - m_Guid: 00000000-0000-0000-0000-000000000000
+          m_State: 3
+          m_Disposing: 0
+          m_TrainingSet: []
+          m_ProjectID: 8bbd2494-7ca3-48d3-9e57-d386ff08ed8e
+        m_Name: New Style
+        m_Description: 
+    - rid: 3211000081864720387
+      type: {class: ImageArtifact, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: 00000000-0000-0000-0000-000000000000
+        m_State: 3
+        m_Disposing: 0
+    - rid: 3211000081864720388
+      type: {class: StyleData, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: 
+        m_State: 3
+        m_Disposing: 0
+        m_IsFallback: 0
+        m_Thumbnail:
+          rid: 3211000081864720389
+        m_Visible: 1
+        selectedCheckPointGUID: 00000000-0000-0000-0000-000000000000
+        m_FavoriteCheckPointGUID: 00000000-0000-0000-0000-000000000000
+        parentID: 00000000-0000-0000-0000-000000000000
+        m_ProjectID: 8bbd2494-7ca3-48d3-9e57-d386ff08ed8e
+        m_TrainingSteps: 2000
+        m_CheckPoints: []
+        m_SampleOutputPrompts:
+        - 
+        - 
+        - 
+        m_TrainingSetData:
+        - m_Guid: 00000000-0000-0000-0000-000000000000
+          m_State: 3
+          m_Disposing: 0
+          m_TrainingSet: []
+          m_ProjectID: 8bbd2494-7ca3-48d3-9e57-d386ff08ed8e
+        m_Name: New Style
+        m_Description: 
+    - rid: 3211000081864720389
+      type: {class: ImageArtifact, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: 00000000-0000-0000-0000-000000000000
+        m_State: 3
+        m_Disposing: 0
