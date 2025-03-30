@@ -11,7 +11,13 @@ public class AiDetectObject : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //Once it detect another trigger box. Slow AiCar down.
+        //Use this to detect any object within in box. Make sure the triggerd BOX COLLIDERS above the ground.
         Debug.Log("Something has entered the BoxCollider!");
+
+        //Use this to detect any object with Car tag
+        if (other.gameObject.tag == "AiCar")
+        {
+            Debug.Log("CAR!");
+        }
     }
 }
