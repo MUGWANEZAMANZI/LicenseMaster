@@ -2,7 +2,8 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class AICarController : MonoBehaviour
+//If you wanna rename alternative_AICarController into something else. Click on it and CTRL and Double R.
+public class alternative_AICarController : MonoBehaviour
 {
     public Transform[] waypoints; // Set waypoints in the Inspector
     private int currentWaypointIndex = 0;

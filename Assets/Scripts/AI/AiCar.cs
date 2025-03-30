@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class AiCar : MonoBehaviour
 {
     [SerializeField] public List<Transform> waypoints;
-    [SerializeField] public float waypointProximityDistance = 50f;
+    [SerializeField] public float waypointProximityDistance = 5f;
     private NavMeshAgent agent;
     private int currentWaypoint = 0;
     public float distanceToWaypoint;
