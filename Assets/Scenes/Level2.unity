@@ -81759,7 +81759,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -97803,8 +97803,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2004765157}
-  - component: {fileID: 2004765159}
   - component: {fileID: 2004765158}
+  - component: {fileID: 2004765159}
   m_Layer: 0
   m_Name: 60
   m_TagString: 60
@@ -97857,7 +97857,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2004765156}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017a888fac4801947b6fd5f5414066cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 93e3cbc922ce98f40a0b648531287367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2008164405

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DetectObject : MonoBehaviour
+public class AiDetectObject : MonoBehaviour
 {
     //REMEMBER to put two trigger box, one in front and other behind the ai car.
     //Make sure other objects have box collider trigger on in order this to work.

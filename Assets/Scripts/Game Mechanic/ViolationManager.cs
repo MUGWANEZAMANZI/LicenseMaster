@@ -6,7 +6,7 @@ public class ViolationManager : MonoBehaviour
 {
     [Header("ViolationManager")]
     public CarController carController;
-    public Detected detected;
+    public PlayerDetected detected;
     public GameObject[] speedLmitDetectors;
     public static bool violatedInViolationManager = false;
     public static int punishedWith = 0;
@@ -21,7 +21,7 @@ public class ViolationManager : MonoBehaviour
     {
         if(carController != null)
         {
-            if (Detected.isDetected) SpeedLimitViolation();
+            if (PlayerDetected.isDetected) SpeedLimitViolation();
         }
         else
         {
@@ -33,7 +33,7 @@ public class ViolationManager : MonoBehaviour
     public static void SpeedLimitViolation()
     {
         float currentSpeed = CarController.speed;
-        string violated = (Detected.detectedTag);
+        string violated = (PlayerDetected.detectedTag);
         
         if( currentSpeed > 60f && violated == "60")
         {

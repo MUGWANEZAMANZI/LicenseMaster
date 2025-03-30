@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Detected : MonoBehaviour
+public class PlayerDetected : MonoBehaviour
 {
     public static string detectedTag;
     public static bool isDetected = false;
