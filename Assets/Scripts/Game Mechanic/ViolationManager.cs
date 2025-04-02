@@ -8,12 +8,15 @@ public class ViolationManager : MonoBehaviour
     public CarController carController;
     public PlayerDetected detected;
     public GameObject[] speedLmitDetectors;
-    public static bool violatedInViolationManager = false;
-    public static int punishedWith = 0;
+    public bool violatedInViolationManager = false;
+    public int punishedWith = 0;
+    public UIManager uiManager; //UIManager instance
+    public Finance finance; //Fiunanace Class instance
     // Start is called before the first frame update
     void Start()
     {
         carController = FindObjectOfType<CarController>();
+        UIManager uiManager = FindObjectOfType<UIManager>();
     }
 
     // Update is called once per frame
@@ -22,6 +25,7 @@ public class ViolationManager : MonoBehaviour
         if(carController != null)
         {
             if (PlayerDetected.isDetected) SpeedLimitViolation();
+
         }
         else
         {
@@ -30,9 +34,10 @@ public class ViolationManager : MonoBehaviour
         //Debug.Log(violatedInViolationManager);
     }
 
-    public static void SpeedLimitViolation()
+    public void SpeedLimitViolation()
     {
         float currentSpeed = CarController.speed;
+        //Debug.Log(currentSpeed);
         string violated = (PlayerDetected.detectedTag);
         
         if( currentSpeed > 60f && violated == "60")
@@ -42,8 +47,9 @@ public class ViolationManager : MonoBehaviour
         }
         if (violatedInViolationManager)
         {
-            punishedWith = Finance.Violation("Speeding");
-            UIManager.SpeedLimit(currentSpeed, punishedWith);
+           
+            punishedWith = finance.Violation("Speeding");
+            uiManager.SpeedLimit(currentSpeed, punishedWith);
         }
 
     }
