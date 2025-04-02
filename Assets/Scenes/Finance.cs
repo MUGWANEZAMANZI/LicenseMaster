@@ -60,6 +60,9 @@ public class Finance : MonoBehaviour
     }
 
     // Helper method to log information to the console
-
+    private void Log(string message)
+    {
+       //Debug.Log(message);
+    }
 }
 
