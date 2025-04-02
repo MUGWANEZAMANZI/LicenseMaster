@@ -30,7 +30,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] public List<Violations> incuredViolations = new List<Violations>();
     [Header("Infinite")]
     [SerializeField] public bool isInfinite = false;
-    public GameObject parkingZonePrefab;  // Prefab of the ParkingZone to spawn
+    public GameObject parkingZonePrefab;  // Prefab of level[X]phase[X]
     public List<Vector3> spawnZones;  // List of predefined positions to spawn parking zones
     public int spawnZoneCount;
     public int parkingZoneCount;
@@ -224,14 +224,12 @@ public class LevelManager : MonoBehaviour
         }
 
     }
-    // Spawn a new ParkingZone at a random location within the spawn area
+    // Spawn a new ParkingZone at a location
     private void SpawnParkingZone(Vector3 spawnPosition)
     {
         parkingZoneCount = spawnZoneCount;
         // Instantiate the parking zone prefab at the specified position
         GameObject parkingZoneObject = Instantiate(parkingZonePrefab, spawnPosition, Quaternion.identity);
-
-        // Optionally, you can get a reference to the ParkingZone component if needed
         ParkingZone parkingZoneScript = parkingZoneObject.GetComponentInChildren<ParkingZone>();
 
         // Add the spawned ParkingZone to the list

@@ -22,7 +22,6 @@ public class TrafficLightController : MonoBehaviour
     public float yellowTime = 2f;
     public float greenTime = 10f;
 
-    // Enum to represent the three states
     private enum TrafficLightState
     {
         Red,
@@ -33,7 +32,6 @@ public class TrafficLightController : MonoBehaviour
 
     void Start()
     {
-        // Initialize with red light and reset timer
         currentState = TrafficLightState.Red;
         timer = redTime;
     }
