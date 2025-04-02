@@ -31116,11 +31116,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parkingZones:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1057531447}
+  - {fileID: 2108980228}
+  - {fileID: 24557801}
+  - {fileID: 1233508669}
+  initialValue: 0
   objectivesFound: 0
   levelTime: 0
+  isInfinite: 0
   points: 100
   violations: 0
   elapsedTime: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using AK.Wwise;
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -21,12 +22,18 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] public List<ParkingZone> parkingZones;
     [SerializeField] public int objectivesFound = 0;
-    [SerializeField] public float levelTime = 0;
+    [SerializeField] public float levelTime = 0; 
     [SerializeField] public int points = 100;
     [SerializeField] public int violations = 0;
     [SerializeField] public float elapsedTime = 0f;
     [SerializeField] public float currentZoneSpeedLimit = 30f;
     [SerializeField] public List<Violations> incuredViolations = new List<Violations>();
+    [Header("Infinite")]
+    [SerializeField] public bool isInfinite = false;
+    public GameObject parkingZonePrefab;  // Prefab of the ParkingZone to spawn
+    public List<Vector3> spawnZones;  // List of predefined positions to spawn parking zones
+    public int spawnZoneCount;
+    public int parkingZoneCount;
 
     [Header("Level Params")]
     [SerializeField] public float violationWarningTime;
@@ -75,6 +82,13 @@ public class LevelManager : MonoBehaviour
         }
 
         LevelStart.Post(gameObject);
+
+        //If the level is Infinite playable
+        if (isInfinite)
+        {
+            parkingZoneCount = parkingZones.Count;
+            spawnZoneCount = spawnZones.Count;
+        }
     }
 
     void Update()
@@ -191,5 +205,38 @@ public class LevelManager : MonoBehaviour
             if (points >= 75) LevelWin.Post(gameObject);
             if (points < 75) LevelLose.Post(gameObject);
         }
+    }
+
+    public void EndlessObjective()
+    {
+        objectivesFound++;
+        parkingZoneCount--;
+        parkedScreen.SetActive(true);
+        if (parkingZoneCount == 0)
+        {
+            parkingZones.Clear();
+            // Add back the initial number of ParkingZone instances
+            for (int i = 0; i < spawnZoneCount; i++)
+            {
+                SpawnParkingZone(spawnZones[i]);
+            }
+            Debug.Log("Parking zones reset to initial count: " + spawnZoneCount);
+        }
+
+    }
+    // Spawn a new ParkingZone at a random location within the spawn area
+    private void SpawnParkingZone(Vector3 spawnPosition)
+    {
+        parkingZoneCount = spawnZoneCount;
+        // Instantiate the parking zone prefab at the specified position
+        GameObject parkingZoneObject = Instantiate(parkingZonePrefab, spawnPosition, Quaternion.identity);
+
+        // Optionally, you can get a reference to the ParkingZone component if needed
+        ParkingZone parkingZoneScript = parkingZoneObject.GetComponentInChildren<ParkingZone>();
+
+        // Add the spawned ParkingZone to the list
+        parkingZones.Add(parkingZoneScript);
+
+        Debug.Log("Spawned new ParkingZone at: " + spawnZones);
     }
 }

@@ -9,8 +9,16 @@ public class ParkingZone : MonoBehaviour
         //Debug.Log(playerHasEnteredZone);
         if (playerHasEnteredZone && Mathf.Abs(CarController.speed) < .5) 
         {
-            LevelManager.instance.CompleteObjective();
-            gameObject.SetActive(false);
+            if (LevelManager.instance.isInfinite == false)
+            {
+                LevelManager.instance.CompleteObjective();
+                gameObject.SetActive(false);
+            }
+            else
+            {
+                LevelManager.instance.EndlessObjective();
+                gameObject.SetActive(false);
+            }
         }
     }
 
