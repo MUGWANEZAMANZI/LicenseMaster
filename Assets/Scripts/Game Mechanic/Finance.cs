@@ -1,9 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using System.Collections.Generic;
-using UnityEngine;
-
 public class Finance : MonoBehaviour
 {
     public int Cash = 5000; // Changed from string to int
@@ -60,6 +57,10 @@ public class Finance : MonoBehaviour
     }
 
     // Helper method to log information to the console
+    private void Log(string message)
+    {
+        Debug.Log(message);
+    }
 
 }
 
