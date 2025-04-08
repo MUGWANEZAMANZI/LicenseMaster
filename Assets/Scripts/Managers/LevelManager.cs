@@ -28,6 +28,12 @@ public class LevelManager : MonoBehaviour
     [SerializeField] public float elapsedTime = 0f;
     [SerializeField] public float currentZoneSpeedLimit = 30f;
     [SerializeField] public List<Violations> incuredViolations = new List<Violations>();
+    [Header("Infinite")]
+    [SerializeField] public bool isInfinite = false;
+    public GameObject parkingZonePrefab;  // Prefab of level[X]phase[X]
+    public List<Vector3> spawnZones;  // List of predefined positions to spawn parking zones
+    public int spawnZoneCount;
+    public int parkingZoneCount;
 
     [SerializeField] int moneyOwn = 0;
     public bool penaltyFinePaid = true;

@@ -31120,20 +31120,15 @@ MonoBehaviour:
   - {fileID: 2108980228}
   - {fileID: 24557801}
   - {fileID: 1233508669}
+  initialValue: 0
   objectivesFound: 0
   levelTime: 0
+  isInfinite: 0
   points: 100
   violations: 0
   elapsedTime: 0
   currentZoneSpeedLimit: 40
   incuredViolations: 
-  moneyOwn: 0
-  penaltyFinePaid: 0
-  isInfinite: 0
-  parkingZonePrefab: {fileID: 0}
-  spawnZones: []
-  spawnZoneCount: 0
-  parkingZoneCount: 0
   violationWarningTime: 3
   player: {fileID: 1293815429}
   HudOverlay: {fileID: 1211327602}
@@ -54059,73 +54054,6 @@ Transform:
   - {fileID: 1422503094}
   m_Father: {fileID: 1225853010}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &985482300
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 985482302}
-  - component: {fileID: 985482301}
-  - component: {fileID: 985482303}
-  m_Layer: 0
-  m_Name: Police Parking Zone
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &985482301
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985482300}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 10, y: 2, z: 25}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &985482302
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985482300}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -539.52136, y: 2.77, z: 68.75049}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &985482303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985482300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b3f6fa05c55bb745a8606c9cb5651ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boxCollider: {fileID: 985482301}
 --- !u!43 &985582081
 Mesh:
   m_ObjectHideFlags: 0
@@ -81013,7 +80941,7 @@ GameObject:
   - component: {fileID: 1765987989}
   - component: {fileID: 1765987990}
   m_Layer: 0
-  m_Name: Detect an Object for the ai car
+  m_Name: GameObject
   m_TagString: AiCar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104293,4 +104221,3 @@ SceneRoots:
   - {fileID: 1385742732}
   - {fileID: 1293815428}
   - {fileID: 1765987989}
-  - {fileID: 985482302}
