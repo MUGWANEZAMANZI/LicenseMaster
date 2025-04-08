@@ -28,8 +28,12 @@ public class LevelManager : MonoBehaviour
     [SerializeField] public float elapsedTime = 0f;
     [SerializeField] public float currentZoneSpeedLimit = 30f;
     [SerializeField] public List<Violations> incuredViolations = new List<Violations>();
+
+    [SerializeField] int moneyOwn = 0;
+    public bool penaltyFinePaid = true;
+
     [Header("Infinite")]
-    [SerializeField] public bool isInfinite = false;
+    public bool isInfinite = false;
     public GameObject parkingZonePrefab;  // Prefab of level[X]phase[X]
     public List<Vector3> spawnZones;  // List of predefined positions to spawn parking zones
     public int spawnZoneCount;
@@ -98,6 +102,7 @@ public class LevelManager : MonoBehaviour
         if (player.offRoad && !offRoadViolationCoroutine) StartCoroutine(OffRoadViolation());
         if (player.wrongWay && !oneWayViolationCoroutine) StartCoroutine(OneWayViolation());
         levelTime += Time.deltaTime;
+        if (incuredViolations.Count != 0) penaltyFinePaid = false; //Go to police station to pay fines.
     }
 
     private IEnumerator OneWayViolation()
@@ -109,6 +114,7 @@ public class LevelManager : MonoBehaviour
         if (player.wrongWay)
         {
             points -= oneWayDeduction;
+            moneyOwn += oneWayDeduction; //Add fine!
             TriggerWarning.Post(gameObject);
             incuredViolations.Add(Violations.OneWay);
         }
@@ -125,6 +131,7 @@ public class LevelManager : MonoBehaviour
         if (player.offRoad)
         {
             points -= offRoadDeduction;
+            moneyOwn += offRoadDeduction; //Add fine!
             TriggerWarning.Post(gameObject);
             incuredViolations.Add(Violations.OffRoad);
         }
@@ -141,6 +148,7 @@ public class LevelManager : MonoBehaviour
         if (CarController.speed > currentZoneSpeedLimit)
         {
             points -= speedLimitDeduction;
+            moneyOwn += speedLimitDeduction; //Add fine!
             TriggerWarning.Post(gameObject);
             incuredViolations.Add(Violations.Speed);
         }
@@ -173,6 +181,7 @@ public class LevelManager : MonoBehaviour
         if (stopViolationCoroutine) return;
         StartCoroutine(StopViolationDebounce());
         points -= stopZoneDeduction;
+        moneyOwn += stopZoneDeduction; //Add fine!
         TriggerWarning.Post(gameObject);
         incuredViolations.Add(Violations.Stop);
     }
@@ -182,8 +191,26 @@ public class LevelManager : MonoBehaviour
         if (collisionViolationCoroutine) return;
         StartCoroutine(CollisionViolationDebounce());
         points -= collisionDeduction;
+        moneyOwn += collisionDeduction; //Add fine!
         TriggerWarning.Post(gameObject);
         incuredViolations.Add(Violations.Collision);
+    }
+
+    //Police fines
+    public void PayFine()
+    {
+        if (points - moneyOwn < 0)
+        {
+            Debug.Log("Game Over: Insufficient points.");
+            LevelLose.Post(gameObject);
+        }
+        else
+        {
+            points -= moneyOwn; moneyOwn = 0;
+            penaltyFinePaid = true;
+            incuredViolations.Clear();
+            Debug.Log("Points remaining: " + points);
+        }
     }
 
     public void RedLightViolation()
