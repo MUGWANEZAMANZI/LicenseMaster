@@ -1,5 +1,5 @@
 {
-    "originalSdkFolder": "/Users/danielramirez/Library/Audio/Wwise2024.1.1.8691/SDK",
+    "originalSdkFolder": "C:\\Program Files (x86)\\Audiokinetic\\Wwise2024.1.1.8691\\SDK",
     "currentVersion": {
         "nickname": "",
         "build": 3311,
@@ -27,6 +27,18 @@
         {
             "id": "DeploymentPlatforms",
             "valueId": "Emscripten"
+        },
+        {
+            "id": "Packages",
+            "valueId": "Unity"
+        },
+        {
+            "id": "DeploymentPlatforms",
+            "valueId": "Mac"
+        },
+        {
+            "id": "DeploymentPlatforms",
+            "valueId": "Windows"
         }
     ]
 }
