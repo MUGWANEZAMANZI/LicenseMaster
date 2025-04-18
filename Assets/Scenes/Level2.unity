@@ -64221,6 +64221,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: ec54e16667a51b448a5fcc9f2f6cbf24, type: 2}
     - target: {fileID: 192442646415967025, guid: 2ebfc190dd0f0b74ea0542253d740d4e, type: 3}
+      propertyPath: PlayerSpeed.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 6349d170543191b40a9b08715fbf46dc, type: 2}
+    - target: {fileID: 192442646415967025, guid: 2ebfc190dd0f0b74ea0542253d740d4e, type: 3}
       propertyPath: CarEngineStart.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: 29646be4ca163344e8ba12a439415c22, type: 2}
