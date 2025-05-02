@@ -8,6 +8,7 @@ public class AiDetectObject : MonoBehaviour
     //Make sure other objects have box collider trigger on in order this to work.
     //Change box collider value depend on how much responsinse you want to car to have. (i.e: make the box small if you want to car to start stopping when too close to other).
     [SerializeField] AiCar aiCarScript;
+    [SerializeField] TrafficLightController trafficLightControllerScript;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,6 +19,19 @@ public class AiDetectObject : MonoBehaviour
         if (other.gameObject.tag == "AiCar")
         {
             Debug.Log("CAR!");
+            aiCarScript.hasStopped = true;
+        }
+        else if (other.gameObject.tag == "StopSign")
+        {
+            if (trafficLightControllerScript.redLight)
+            {
+                Debug.Log("StopSign!");
+                aiCarScript.hasStopped = true;
+            }
+            else if (trafficLightControllerScript.greenLight)
+            {
+                aiCarScript.hasStopped = false;
+            }
         }
     }
 }

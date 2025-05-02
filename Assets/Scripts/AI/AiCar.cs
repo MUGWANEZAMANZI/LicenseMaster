@@ -5,19 +5,22 @@ using UnityEngine.AI;
 
 public class AiCar : MonoBehaviour
 {
+    [Header("Way Points")]
     [SerializeField] public List<Transform> waypoints;
     [SerializeField] public float waypointProximityDistance = 5f;
     private NavMeshAgent agent;
     private int currentWaypoint = 0;
     public float distanceToWaypoint;
 
+    [Header("Speed")]
     [SerializeField] private float setSpeed = 35f;
     private float normalAcceleration = 35;
     [SerializeField] private float alteredAcceleration = 50f;
     private bool isAccelerating = false;
-
     public float decelerationRate = 0.5f;
     private float currentSpeed; //This is to store the AI current speed.
+
+    [Header("Other")]
     public bool hasStopped = false;
     public float parkingTime = 3f; // Time spent parking
 
@@ -34,13 +37,13 @@ public class AiCar : MonoBehaviour
 
         if (!hasStopped)
         {
-            StartCoroutine(AccelerateToSpeed());
+            AccelerateToSpeed();
             distanceToWaypoint = Vector3.Distance(waypoints[currentWaypoint].transform.position, transform.position);
             SetDestinationToCurrentWaypoint();
         }
         else if (hasStopped)
         {
-            StartCoroutine(DecelerateToStop());
+            DecelerateToStop();
             Debug.Log("STOP AI!");
         }
     }
@@ -70,22 +73,20 @@ public class AiCar : MonoBehaviour
         isAccelerating = false;
     }
 
-    private IEnumerator AccelerateToSpeed()
+    public void AccelerateToSpeed()
     {
         while (agent.speed < currentSpeed)
         {
             agent.speed += decelerationRate * Time.deltaTime;
-            yield return null;
         }
         agent.speed = currentSpeed;
     }
 
-    private IEnumerator DecelerateToStop()
+    public void DecelerateToStop()
     {
         while (agent.speed > 0.1f)
         {
             agent.speed -= decelerationRate * Time.deltaTime;
-            yield return null;
         }
         agent.speed = 0;
     }

@@ -9,6 +9,7 @@ TagManager:
   - AiCar
   - AiParkZone
   - 60
+  - AutonomousVehicle
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Road
   - 
   - MuseTextureLayer
-  - 
+  - AutonomousVehicle
   - 
   - 
   - 
